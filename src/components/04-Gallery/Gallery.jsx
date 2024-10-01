@@ -308,14 +308,20 @@ export default function Gallery() {
                       alt={item.title}
                       controls
                       muted
+                      data-aos="fade-in"
+                      data-aos-delay="200"
                       autoPlay
                       loop
+                      style={{ borderRadius: "8px" }}
                     />
                   ) : (
                     <img
                       src={item.src}
                       className="img-fluid"
                       alt={item.title}
+                      data-aos="fade-in"
+                      data-aos-delay="200"
+                      style={{ borderRadius: "8px" }}
                     />
                   )}
                   <div className="gallerySection-info">

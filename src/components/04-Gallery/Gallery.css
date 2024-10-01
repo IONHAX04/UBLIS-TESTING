@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 250px 10px;
+  padding: 50px 10px;
   background-image: url("../../assets/contact/bg.png");
   background-size: cover;
   background-position: center;
@@ -73,8 +73,8 @@
 
 .gallerySection .gallerySection-filters li:hover,
 .gallerySection .gallerySection-filters li.filter-active {
-  color: #f95005;
-  border: 1px solid #f95005;
+  color: #ffffff;
+  border: 1px solid #ffffff;
   padding: 12px 20px;
   border-radius: 9px;
 }
@@ -142,7 +142,7 @@
 
 .gallerySection .gallerySection-item .gallerySection-info .preview-link:hover,
 .gallerySection .gallerySection-item .gallerySection-info .details-link:hover {
-  color: #f95005;
+  color: #ffffff;
 }
 
 .gallerySection .gallerySection-item .gallerySection-info .details-link {
@@ -208,7 +208,7 @@
 }
 
 .gallerySection-details .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #f95005;
+  background-color: #ffffff;
 }
 
 .gallerySection-details .gallerySection-info h3 {
@@ -225,7 +225,7 @@
   display: block;
   width: 50px;
   height: 3px;
-  background: #f95005;
+  background: #ffffff;
   left: 0;
   bottom: 0;
 }
@@ -251,14 +251,14 @@
 
 .gallerySection-details .gallerySection-info .btn-visit {
   padding: 8px 40px;
-  background: #f95005;
+  background: #ffffff;
   color: #ffffff;
   border-radius: 50px;
   transition: 0.3s;
 }
 
 .gallerySection-details .gallerySection-info .btn-visit:hover {
-  background: color-mix(in srgb, #f95005, transparent 20%);
+  background: color-mix(in srgb, #ffffff, transparent 20%);
 }
 
 .gallerySection-details .gallerySection-description h2 {
@@ -310,7 +310,7 @@
   .gallerySection-description
   .testimonial-item
   .quote-icon-right {
-  color: color-mix(in srgb, #f95005, transparent 50%);
+  color: color-mix(in srgb, #ffffff, transparent 50%);
   font-size: 26px;
   line-height: 0;
 }
@@ -352,7 +352,7 @@
 
 .gallerySection .container h2 {
   font-size: 50px;
-  color: #f95005;
+  color: #ffffff;
   padding: 20px 0px;
   font-weight: bolder;
   text-align: center;

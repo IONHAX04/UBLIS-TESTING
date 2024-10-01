@@ -49,7 +49,7 @@ export default function Contact() {
     <div>
       <div className="contactUs">
         <section id="contact" className="contact section">
-          <div className="contactFormContainer col-lg-9 mt-5">
+          <div className="contactFormContainer col-lg-7 mt-5">
             <h4>Get in touch</h4>
             <Row className="contactIntro p-4 mt-4">
               <Col lg={4} className="mt-4">

@@ -17,6 +17,7 @@ import "./App.css";
 // Import SpeedDial and Toast from PrimeReact
 import { SpeedDial } from "primereact/speeddial";
 import { Toast } from "primereact/toast";
+import BlogDetails from "./components/05-Blog/BlogDetails";
 
 function App() {
   const toast = useRef(null);
@@ -93,6 +94,7 @@ function App() {
           <Route path="/class" element={<Class />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blogDetails" element={<BlogDetails />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
