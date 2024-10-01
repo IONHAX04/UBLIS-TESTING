@@ -104,11 +104,10 @@ function App() {
         model={speedDialItems}
         showIcon="pi pi-question"
         hideIcon="pi pi-times"
-        mask
         radius={120}
         type="quarter-circle"
         direction="up-left"
-        style={{ right: 30, bottom: 30 }}
+        style={{ right: 30, bottom: 30, zIndex: "10000" }}
       />
     </>
   );

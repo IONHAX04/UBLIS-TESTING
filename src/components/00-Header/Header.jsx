@@ -139,7 +139,7 @@ export default function Header() {
             <img src={logo} height={100} width={100} />
           </div>
           <div
-            className="lg:flex navbarLinks hidden gap-12 text-md text-[#000000] cursor-pointer"
+            className="lg:flex navbarLinks hidden gap-12 text-md text-[#ffffff] cursor-pointer"
             style={{ fontWeight: "bold", fontSize: "17px" }}
           >
             <p onClick={() => handleNavigate("/")}>Home</p>

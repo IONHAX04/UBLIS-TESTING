@@ -15,6 +15,12 @@
   width: 100%;
 }
 
+@supports (-webkit-overflow-scrolling: touch) {
+  .navbarBgImg {
+    background-attachment: scroll;
+  }
+}
+
 .navbarBgImg::before {
   content: "";
   position: absolute;
