@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.p-speeddial-action {
+  background: white;
+}
+
+.p-speeddial-button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.p-speeddial-button {
+  height: 60px;
+  background-color: #0768b5;
+  color: white;
+  width: 60px;
+  border-radius: 50%;
+}
+
+.p-speeddial-button .pi {
+  font-weight: bold;
+}
+
+.p-speeddial {
+  position: fixed;
+}
