@@ -136,10 +136,10 @@ export default function Header() {
           }}
         >
           <div className="flex items-center gap-[1ch] p-2">
-            <img src={logo} height={100} width={100} />
+            <img src={logo} height={90} width={90} />
           </div>
           <div
-            className="lg:flex navbarLinks hidden gap-12 text-md text-[#ffffff] cursor-pointer"
+            className="lg:flex navbarLinks hidden gap-12 text-md text-[#000000] cursor-pointer"
             style={{ fontWeight: "bold", fontSize: "17px" }}
           >
             <p onClick={() => handleNavigate("/")}>Home</p>
@@ -158,7 +158,7 @@ export default function Header() {
                 open ? `rotate-${iconRotation}` : `rotate-0`
               }`}
               style={{
-                color: "#ffffff",
+                color: "#f95005",
                 fontSize: "2rem",
                 transition: "transform 0.5s",
               }}

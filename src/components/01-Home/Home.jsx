@@ -1,5 +1,6 @@
 import "./Home.css";
 import Testimonials from "./Testimonials";
+import { Typewriter } from "react-simple-typewriter";
 
 export default function Home() {
   return (
@@ -9,8 +10,16 @@ export default function Home() {
           <h1 data-aos="fade-in" data-aos-delay="200">
             UBLIS YOGA{" "}
           </h1>
-          <h2 data-aos="fade-in" data-aos-delay="200">
-            where serenity is bonded to health and happiness.
+          <h2 className="introText">
+            Where Serenity Meets{" "}
+            <span style={{ fontWeight: "bold", color: "#f95005" }}>
+              <Typewriter
+                words={["Health !", "Happiness"]}
+                loop={0}
+                typeSpeed={120}
+                deleteSpeed={80}
+              />
+            </span>
           </h2>
         </div>
         <div className="welcomeUblis">

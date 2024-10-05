@@ -26,7 +26,7 @@ import jawadhuHillsSeven from "../../assets/eventOne/img7.jpeg";
 import jawadhuHillsEight from "../../assets/eventOne/img8.jpeg";
 import jawadhuHillsNine from "../../assets/eventOne/img9.jpeg";
 import jawadhuHillsTen from "../../assets/eventOne/img10.jpeg";
-import jawadhuHillsEleven from "../../assets/eventOne/img11.jpeg";
+// import jawadhuHillsEleven from "../../assets/eventOne/img11.jpeg";
 import jawadhuHillsTwelve from "../../assets/eventOne/img12.jpeg";
 
 // import product1 from "../../assets/gallery/product-1.jpg";
@@ -234,13 +234,13 @@ export default function Gallery() {
                   subHeading: "Lorem text",
                   type: "image",
                 },
-                {
-                  src: jawadhuHillsEleven,
-                  title: "Jawadhu Hills - Yoga",
-                  filter: "filter-books",
-                  subHeading: "Lorem text",
-                  type: "image",
-                },
+                // {
+                //   src: jawadhuHillsEleven,
+                //   title: "Jawadhu Hills - Yoga",
+                //   filter: "filter-books",
+                //   subHeading: "Lorem text",
+                //   type: "image",
+                // },
                 {
                   src: jawadhuHillsFour,
                   title: "Jawadhu Hills - Explore Nature",
@@ -308,8 +308,6 @@ export default function Gallery() {
                       alt={item.title}
                       controls
                       muted
-                      data-aos="fade-in"
-                      data-aos-delay="200"
                       autoPlay
                       loop
                       style={{ borderRadius: "8px" }}
@@ -319,8 +317,6 @@ export default function Gallery() {
                       src={item.src}
                       className="img-fluid"
                       alt={item.title}
-                      data-aos="fade-in"
-                      data-aos-delay="200"
                       style={{ borderRadius: "8px" }}
                     />
                   )}
