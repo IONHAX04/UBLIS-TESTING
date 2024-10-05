@@ -1,0 +1,379 @@
+.containers {
+  height: 300vh;
+  position: relative;
+}
+
+.sticky {
+  position: sticky;
+  overflow: hidden;
+  top: 0;
+  height: 100vh;
+}
+
+.el {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contentBox {
+  height: 70vh !important;
+}
+
+.imageContainer {
+  position: relative;
+  width: 25vw;
+  height: 25vh;
+  margin-top: 150px;
+}
+
+.imageContainer img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.h-screen {
+  height: 70vh !important;
+}
+
+/* Styles for the 2nd image */
+.el:nth-of-type(2) .imageContainer {
+  top: -30vh;
+  left: 5vw;
+  width: 35vw;
+  height: 30vh;
+}
+
+/* Styles for the 3rd image */
+.el:nth-of-type(3) .imageContainer {
+  top: -10vh;
+  left: -25vw;
+  width: 20vw;
+  height: 45vh;
+}
+
+/* Styles for the 4th image */
+.el:nth-of-type(4) .imageContainer {
+  left: 27.5vw;
+  width: 25vw;
+  height: 25vh;
+}
+
+/* Styles for the 5th image */
+.el:nth-of-type(5) .imageContainer {
+  top: 27.5vh;
+  left: 5vw;
+  width: 20vw;
+  height: 25vh;
+}
+
+/* Styles for the 6th image */
+.el:nth-of-type(6) .imageContainer {
+  top: 27.5vh;
+  left: -22.5vw;
+  width: 30vw;
+  height: 25vh;
+}
+
+/* Styles for the 7th image */
+.el:nth-of-type(7) .imageContainer {
+  top: 22.5vh;
+  left: 25vw;
+  width: 15vw;
+  height: 15vh;
+}
+
+@media only screen and (max-width: 480px) {
+  .imageContainer {
+    position: relative;
+    width: 65vw;
+    height: 25vh;
+    margin-top: 0;
+  }
+
+  .imageContainer img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Styles for the 2nd image */
+  .el:nth-of-type(2) .imageContainer {
+    top: -20vh;
+    left: 5vw;
+    width: 35vw;
+    height: 30vh;
+  }
+
+  /* Styles for the 3rd image */
+  .el:nth-of-type(3) .imageContainer {
+    top: -13vh;
+    left: -25vw;
+    width: 30vw;
+    height: 45vh;
+  }
+
+  /* Styles for the 4th image */
+  .el:nth-of-type(4) .imageContainer {
+    left: 35vw;
+    top: -12vh;
+    width: 25vw;
+    height: 25vh;
+  }
+
+  /* Styles for the 5th image */
+  .el:nth-of-type(5) .imageContainer {
+    top: 12.5vh;
+    left: 5vw;
+    width: 30vw;
+    height: 25vh;
+  }
+
+  /* Styles for the 6th image */
+  .el:nth-of-type(6) .imageContainer {
+    top: 19vh;
+    left: -27vw;
+    width: 40vw;
+    height: 25vh;
+  }
+
+  /* Styles for the 7th image */
+  .el:nth-of-type(7) .imageContainer {
+    top: 20.5vh;
+    left: 35vw;
+    width: 20vw;
+    height: 15vh;
+  }
+}
+
+.classDetails .gy-5 .details p {
+  text-align: start;
+}
+
+.service-item {
+  background-color: #ffffff;
+  box-shadow: 0px 5px 90px 0px rgba(0, 0, 0, 0.1);
+  padding: 40px 30px;
+  transition: all ease-in-out 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  border-bottom: 5px solid #ffffff;
+  height: 100%;
+}
+
+.service-item .icon {
+  color: #ffffff;
+  background: #f95005;
+  margin: 0;
+  width: 64px;
+  height: 64px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+  transition: ease-in-out 0.3s;
+}
+
+.service-item h5 {
+  text-align: center;
+}
+
+.service-item h3 {
+  font-weight: 700;
+  margin: 10px 0 15px 0;
+  font-size: 22px;
+  text-align: center;
+  transition: ease-in-out 0.3s;
+}
+
+.service-item p {
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+@media (min-width: 1365px) {
+  .service-item:hover {
+    transform: translateY(-10px);
+    border-color: #f95005;
+  }
+
+  .service-item:hover h3 {
+    color: #f95005;
+  }
+}
+
+.classDetails .service-item p {
+  text-align: start;
+}
+
+.classDetails {
+  padding: 80px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.classDetails .classContents h3 {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin: 30px 20px 20px 20px;
+}
+
+.classDetails .classContents p {
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.homePageContxt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.homePageContents {
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  font-weight: bold;
+}
+
+.homePageContents h2 {
+  line-height: 50px;
+}
+
+.homePageContxt,
+.categories {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 10px;
+  background-image: url("../../assets/home/bg.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100%;
+}
+
+@supports (-webkit-overflow-scrolling: touch) {
+  .homePageContxt,
+  .categories {
+    background-attachment: scroll;
+  }
+}
+
+.homePageContxt::before,
+.categories::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.homePageContxt > *,
+.categories > * {
+  position: relative;
+  z-index: 2;
+}
+
+.ourStoryCont h3,
+.whyChooseUs h3,
+.categories h3 {
+  padding-top: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.ourStory p,
+.whyChooseUs p,
+.categories p {
+  font-size: 18px;
+  text-align: center;
+  padding-bottom: 15px;
+  padding-top: 10px;
+}
+
+.categoriesCont h3,
+.categoriesCont p {
+  color: white;
+}
+
+.ourStory,
+.whyChooseUs,
+.categories {
+  display: flex;
+  padding: 30px 40px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.feeStructure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.feeStructure h3 {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  color: #f95005;
+  padding: 50px 0px 20px 0px;
+}
+
+.feeStructure h5 {
+  font-size: 23px;
+  text-align: center;
+  color: black;
+  padding: 10px 0px 40px 0px;
+}
+
+.feeStructure .row {
+  display: flex;
+  justify-content: center;
+}
+
+.contentss {
+  padding: 30px 5px;
+}
+
+.contentss h4 {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  color: #f95005;
+}
+
+.contentss .image {
+  padding: 40px 10px;
+}
+
+.contentss .image img {
+  height: 700px;
+}

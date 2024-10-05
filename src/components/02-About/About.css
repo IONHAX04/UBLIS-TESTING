@@ -1,0 +1,31 @@
+.aboutUsTeam .col-md-12 h4 {
+  font-size: 52px;
+  font-weight: 600;
+}
+
+.aboutUsTeam .col-md-12 p span {
+  color: #f95005;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+@media (max-width: 767px) {
+  .aboutUsCont {
+    padding: 40px 10px 0px 10px;
+  }
+  .carouselItems .carousel {
+    width: 90vw;
+  }
+  .ourMission {
+    height: 500px;
+  }
+}
+
+.aboutUsImag img {
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}

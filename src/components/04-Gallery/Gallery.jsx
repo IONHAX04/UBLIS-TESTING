@@ -85,7 +85,11 @@ export default function Gallery() {
 
   return (
     <div>
-      <div id="gallerySection" className="gallerySection section">
+      <div
+        id="gallerySection"
+        className="gallerySection section"
+        style={{ marginBottom: "250px" }}
+      >
         <div className="container introSec" data-aos="fade-up">
           <h2>Our Space</h2>
           <p>
@@ -111,7 +115,6 @@ export default function Gallery() {
               <li data-filter="*" className="filter-active">
                 All
               </li>
-              {/* <li data-filter=".filter-product">Adult</li> */}
               <li data-filter=".filter-branding">Beach Yoga</li>
               <li data-filter=".filter-books">Jawadhu Hills</li>
               <li data-filter=".videos">Videos</li>
@@ -310,7 +313,7 @@ export default function Gallery() {
                       muted
                       autoPlay
                       loop
-                      style={{ borderRadius: "8px" }}
+                      style={{ borderRadius: "8px", blockSize: "100%" }}
                     />
                   ) : (
                     <img
