@@ -100,7 +100,7 @@ export default function Gallery() {
           </p>
         </div>
 
-        <div className="container galleryIsotopeContainer">
+        <div className="container galleryIsotopeContainer ms-5 me-5">
           <div
             className="isotope-layout"
             data-default-filter="*"

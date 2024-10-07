@@ -6,12 +6,12 @@ import { Container, Row, Col, OverlayTrigger, Tooltip } from "react-bootstrap";
 import PropTypes from "prop-types";
 
 import Picture1 from "../../assets/logo/logo.png";
-import Picture2 from "../../assets/classes/Children Meditating.png";
-import Picture3 from "../../assets/classes/Kundalini Yoga Breathing.png";
-import Picture4 from "../../assets/classes/Meditating.png";
-import Picture5 from "../../assets/classes/Senior Yoga Class.png";
-import Picture6 from "../../assets/classes/Yoga Class.png";
-import Picture7 from "../../assets/classes/Yoga.png";
+import Picture2 from "../../assets/classes/kids.png";
+import Picture3 from "../../assets/classes/ladies.png";
+import Picture4 from "../../assets/classes/unisex.png";
+import Picture5 from "../../assets/classes/senior.png";
+import Picture6 from "../../assets/classes/pregnancy.png";
+import Picture7 from "../../assets/classes/pranayama.png";
 
 import off1 from "../../assets/eventOne/img1.jpeg";
 import off2 from "../../assets/eventOne/img1.jpeg";
@@ -161,6 +161,11 @@ const Card = ({ card }) => {
         }}
         className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
       ></div>
+      <div className="absolute inset-0 z-10 grid place-content-center">
+        <p className="bg-gradient-to-br from-white/20 to-white/0 p-8 text-6xl font-black uppercase text-white backdrop-blur-lg">
+          {card.title}
+        </p>
+      </div>
     </div>
   );
 };
@@ -168,42 +173,42 @@ const Card = ({ card }) => {
 const cards = [
   {
     url: off1,
-    title: "Title 1",
+    title: "Preparatory Movements – Warmups",
     id: 1,
   },
   {
     url: off2,
-    title: "Title 2",
+    title: "Chandra Namaskar",
     id: 2,
   },
   {
     url: off3,
-    title: "Title 3",
+    title: "Cardio Surya Namaskar",
     id: 3,
   },
   {
     url: off4,
-    title: "Title 4",
+    title: "Power Yoga",
     id: 4,
   },
   {
     url: off5,
-    title: "Title 5",
+    title: "Bandham",
     id: 5,
   },
   {
     url: off6,
-    title: "Title 6",
+    title: "Meditation",
     id: 6,
   },
   {
     url: off1,
-    title: "Title 1",
+    title: "Yoga Nidra",
     id: 7,
   },
   {
     url: off2,
-    title: "Title 2",
+    title: "Surya Namaskar",
     id: 8,
   },
   {

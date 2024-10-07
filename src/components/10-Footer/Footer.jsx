@@ -79,12 +79,12 @@ export default function Footer() {
                   >
                     Gallery{" "}
                   </Nav.Link>
-                  <Nav.Link
+                  {/* <Nav.Link
                     className="text-lg text-white hover:text-yellow-500"
                     onClick={() => handleNavigate("/blog")}
                   >
                     Blog{" "}
-                  </Nav.Link>
+                  </Nav.Link> */}
                   <Nav.Link
                     className="text-lg text-white hover:text-yellow-500"
                     onClick={() => handleNavigate("/contact")}

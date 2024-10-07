@@ -6,6 +6,9 @@ import instructor from "../../assets/about/deepika.png";
 
 import { Row, Col } from "react-bootstrap";
 
+import ourJourney from "../../assets/about/ourJourney.png";
+import mission from "../../assets/about/mission.png";
+
 import "./About.css";
 
 // import mens from "../../assets/about/mens.png";
@@ -15,9 +18,9 @@ import deepika from "../../assets/about/deepika.png";
 
 export default function About() {
   return (
-    <div className="bg-white">
+    <div className="bg-white" style={{ paddingTop: "120px" }}>
       <TextParallaxContent
-        imgUrl="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        imgUrl={ourJourney}
         subheading="About"
         heading="Our Journey."
       >
@@ -29,7 +32,7 @@ export default function About() {
       </TextParallaxContent>
 
       <TextParallaxContent
-        imgUrl="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        imgUrl={mission}
         subheading=""
         heading="Our Mission."
       >
@@ -40,84 +43,90 @@ export default function About() {
         />
       </TextParallaxContent>
 
-      <TextParallaxContent
-        imgUrl="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        subheading="“The Master of Mindful Movement of our Team!!“"
-        heading="Mrs. Deepika."
-      >
-        <div className="instructorContents">
-          <Row className="aboutUsTeam text-center">
-            <Col md={12}>
-              <h4>Our Team</h4>
-              <p>
-                <span>“The Master of Mindful Movement!“</span>
-              </p>
-            </Col>
+      <div className="instructorContents">
+        <Row className="aboutUsTeam text-center">
+          <Col md={12}>
+            <h4>Our Team</h4>
+            <p>
+              <span>“The Master of Mindful Movement!“</span>
+            </p>
+          </Col>
 
-            <section
-              id="aboutUsMission"
-              className="section  light-background"
-              data-builder="section"
-            >
-              <div className="container-fluid mb-5 p-3">
-                <div
-                  className="row gy-4"
-                  style={{ alignItems: "center", justifyContent: "center" }}
-                >
-                  <div className="order-1 order-lg-1 aboutUsImag">
-                    <img
-                      src={instructor}
-                      className="mt-5 mb-2 object-cover"
-                      alt=""
-                      data-aos="zoom-in"
-                      data-aos-delay="100"
-                    />
-                    <br />
-                    <h5 className="m-1">Mrs. Deepika</h5>
-                    <p className="">Lead Instructor</p>
-                  </div>
-                  <div className="d-flex flex-column col-lg-6 justify-content-center order-2 order-lg-2">
-                    <div className="aboutInstructor text-justify">
-                      <div className="text-[18px]">
-                        Meet <b>Mrs. Deepika</b>, a shining source of knowledge
-                        and wisdom in the yoga. Deepika started practicing yoga
-                        at the
-                        <b>age of 8</b>, sparking her passion to master the
-                        practice. To address various health issues, she
-                        specialized in <b>Yoga therapy</b>.
-                      </div>
-                      <br />
-                      <div className="text-[18px]">
-                        With a <b>Master of Science in Yoga and Yoga Therapy</b>
-                        , Deepika brings deep knowledge and expertise to every
-                        className. She specializes in{" "}
-                        <b>Pre & Postnatal Yoga Teacher Training</b>, guiding
-                        mothers-to-be and new mothers on their journey to
-                        wellness, caring for both body and mind. Her expertise
-                        extends further with certifications in{" "}
-                        <b>Yoga Therapy</b>, a{" "}
-                        <b>
-                          Post Graduate Diploma in Yoga Philosophy and
-                          Psychology
-                        </b>
-                        , and another in <b>Fitness and Nutrition</b>. This
-                        allows her to offer a holistic approach to wellness that
-                        nurtures the body, mind, and spirit.
-                      </div>
-                      <br />
-                      <div className="text-[18px]">
-                        With Deepika as your guide, you can trust you're in
-                        capable hands. Join her on the mat and embark on a
-                        journey of self-discovery, healing and transformation.
-                      </div>
-                    </div>
-                  </div>
-                </div>
+          <img
+            src={instructor}
+            className="mt-5 mb-2 instructorImg"
+            alt=""
+            data-aos="zoom-in"
+            data-aos-delay="100"
+          />
+          <br />
+          <h5 className="instructorName">Mrs. Deepika</h5>
+          <p className="instructorRole">Lead Instructor</p>
+          <div className="d-flex flex-column col-lg-6 justify-content-center order-2 order-lg-2">
+            <div className="aboutInstructor text-justify">
+              <div className="deepika-intro">
+                <p>
+                  Introducing{" "}
+                  <strong style={{ color: "#f95005" }}>Mrs. Deepika</strong>,
+                  who is all knowledge in the area of yoga. Deepika began
+                  practicing yoga from{" "}
+                  <strong style={{ color: "#f95005" }}>8 years of age</strong>,
+                  igniting her desire to fully understand the art. She practiced
+                  Yoga even more to incorporate it into her professional life as
+                  a<strong style={{ color: "#f95005" }}> therapist</strong>.
+                </p>
+
+                <p>
+                  Deepika holds a
+                  <strong style={{ color: "#f95005" }}>
+                    {" "}
+                    Master of Science degree
+                  </strong>{" "}
+                  in both Yoga and Yoga Therapy, and every class she takes is
+                  filled with in-depth understanding and practical know-how. She
+                  is a
+                  <strong style={{ color: "#f95005" }}>
+                    certified Independent Pre & Postnatal Yoga Teacher
+                  </strong>{" "}
+                  who takes care of expectant mothers and mothers with newborns
+                  from both physical and psychological angles, aiding their
+                  <strong style={{ color: "#f95005" }}> recovery</strong> and
+                  <strong style={{ color: "#f95005" }}> rehabilitation</strong>.
+                </p>
+
+                <p>
+                  Yoga Therapy trainings, &nbsp;
+                  <strong style={{ color: "#f95005" }}>
+                    a Post Graduate Diploma
+                  </strong>{" "}
+                  in Yoga Philosophy and Psychology, and a
+                  <strong style={{ color: "#f95005" }}>
+                    {" "}
+                    Fitness and Nutrition Advanced Diploma
+                  </strong>
+                  add to her impressive repertoire, by which she is able to take
+                  care of all aspects of one’s wellness—body, mind, and
+                  spirit—in a very
+                  <strong style={{ color: "#f95005" }}> balanced manner</strong>
+                  .
+                </p>
+
+                <p>
+                  With Deepika as your guide, you’ll be in
+                  <strong style={{ color: "#f95005" }}> expert hands</strong>,
+                  gently led toward a path of mindfulness, balance, and
+                  transformation. Make use of her guidance to find, restore, and
+                  <strong style={{ color: "#f95005" }}>
+                    {" "}
+                    transform yourself
+                  </strong>
+                  .
+                </p>
               </div>
-            </section>
-          </Row>{" "}
-        </div>
-      </TextParallaxContent>
+            </div>
+          </div>
+        </Row>{" "}
+      </div>
     </div>
   );
 }
@@ -132,7 +141,7 @@ const TextParallaxContent = ({ imgUrl, subheading, heading, children }) => {
         paddingRight: IMG_PADDING,
       }}
     >
-      <div className="relative h-[70vh]">
+      <div className="relative h-[90vh]">
         <StickyImage imgUrl={imgUrl} />
         <OverlayCopy heading={heading} subheading={subheading} />
       </div>
@@ -164,7 +173,7 @@ const StickyImage = ({ imgUrl }) => {
         backgroundImage: `url(${imgUrl})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        height: `calc(70vh - ${IMG_PADDING * 2}px)`,
+        height: `calc(90vh - ${IMG_PADDING * 2}px)`,
         top: IMG_PADDING,
         scale,
       }}
@@ -208,7 +217,12 @@ const OverlayCopy = ({ subheading, heading }) => {
       <p className="mb-2 text-center text-xl md:mb-4 md:text-3xl">
         {subheading}
       </p>
-      <p className="text-center text-4xl font-bold md:text-7xl">{heading}</p>
+      <p
+        className="text-center text-4xl font-bold md:text-7xl textBorder"
+        style={{ color: "#f95005" }}
+      >
+        {heading}
+      </p>
     </motion.div>
   );
 };

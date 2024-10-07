@@ -29,7 +29,7 @@ export default function Header() {
     { title: "About", href: "/about" },
     { title: "Class", href: "/class" },
     { title: "Gallery", href: "/gallery" },
-    { title: "Blog", href: "/blog" },
+    // { title: "Blog", href: "/blog" },
     { title: "Contact", href: "/contact" },
   ];
 
@@ -146,7 +146,6 @@ export default function Header() {
             <p onClick={() => handleNavigate("/about")}>About</p>
             <p onClick={() => handleNavigate("/class")}>Class</p>
             <p onClick={() => handleNavigate("/gallery")}>Gallery</p>
-            <p onClick={() => handleNavigate("/blog")}>Blog</p>
             <p onClick={() => handleNavigate("/contact")}>Contact</p>
           </div>
           <div

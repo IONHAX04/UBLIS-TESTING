@@ -7,4 +7,5 @@ export default defineConfig({
   optimizeDeps: {
     include: ["isotope-layout"],
   },
+  include: ["@glidejs/glide"],
 });

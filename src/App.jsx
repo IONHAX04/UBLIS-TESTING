@@ -109,7 +109,13 @@ function App() {
         radius={120}
         type="quarter-circle"
         direction="up-left"
-        style={{ right: 30, bottom: 30, zIndex: "10000" }}
+        style={{
+          right: 30,
+          bottom: 30,
+          zIndex: "10000",
+          borderRadius: "50%",
+          boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
+        }}
       />
     </>
   );
