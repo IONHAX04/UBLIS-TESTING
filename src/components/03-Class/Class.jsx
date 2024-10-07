@@ -13,12 +13,19 @@ import Picture5 from "../../assets/classes/senior.png";
 import Picture6 from "../../assets/classes/pregnancy.png";
 import Picture7 from "../../assets/classes/pranayama.png";
 
-import off1 from "../../assets/eventOne/img1.jpeg";
-import off2 from "../../assets/eventOne/img1.jpeg";
-import off3 from "../../assets/eventOne/img1.jpeg";
-import off4 from "../../assets/eventOne/img1.jpeg";
-import off5 from "../../assets/eventOne/img1.jpeg";
-import off6 from "../../assets/eventOne/img1.jpeg";
+import off1 from "../../assets/classes/asanas/13.png";
+import off2 from "../../assets/classes/asanas/12.png";
+import off3 from "../../assets/classes/asanas/11.png";
+import off4 from "../../assets/classes/asanas/10.png";
+import off5 from "../../assets/classes/asanas/9.png";
+import off6 from "../../assets/classes/asanas/8.png";
+import off7 from "../../assets/classes/asanas/7.png";
+import off8 from "../../assets/classes/asanas/6.png";
+import off9 from "../../assets/classes/asanas/5.png";
+import off10 from "../../assets/classes/asanas/4.png";
+import off11 from "../../assets/classes/asanas/3.png";
+import off12 from "../../assets/classes/asanas/2.png";
+import off13 from "../../assets/classes/asanas/1.png";
 
 import timing from "../../assets/schedules/class.jpeg";
 import fee from "../../assets/schedules/fee.jpeg";
@@ -63,7 +70,7 @@ export default function Class() {
       </div>
 
       <Container className="classDetails mt-5 p-5">
-        <div className="classContents col-lg-7">
+        <div className="classContents col-lg-7 mt-5">
           <h3>Workshops</h3>
           <p>
             We provide a few extra yoga workshops which are aimed at
@@ -75,7 +82,10 @@ export default function Class() {
             and elevate the level of your practice!{" "}
           </p>
         </div>
-        <Row className="gy-4 col-lg-10" style={{ justifyContent: "center" }}>
+        <Row
+          className="gy-4 col-lg-10 mt-3"
+          style={{ justifyContent: "center" }}
+        >
           <Col lg={3} md={6}>
             <div className="service-item position-relative">
               <h3>Meditation</h3>
@@ -161,11 +171,11 @@ const Card = ({ card }) => {
         }}
         className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
       ></div>
-      <div className="absolute inset-0 z-10 grid place-content-center">
+      {/* <div className="absolute inset-0 z-10 grid place-content-center">
         <p className="bg-gradient-to-br from-white/20 to-white/0 p-8 text-6xl font-black uppercase text-white backdrop-blur-lg">
           {card.title}
         </p>
-      </div>
+      </div> */}
     </div>
   );
 };
@@ -202,34 +212,39 @@ const cards = [
     id: 6,
   },
   {
-    url: off1,
+    url: off7,
     title: "Yoga Nidra",
     id: 7,
   },
   {
-    url: off2,
+    url: off8,
     title: "Surya Namaskar",
     id: 8,
   },
   {
-    url: off3,
+    url: off9,
     title: "Title 3",
     id: 9,
   },
   {
-    url: off4,
+    url: off10,
     title: "Title 4",
     id: 10,
   },
   {
-    url: off5,
+    url: off11,
     title: "Title 5",
     id: 11,
   },
   {
-    url: off6,
+    url: off12,
     title: "Title 6",
     id: 12,
+  },
+  {
+    url: off13,
+    title: "Title 6",
+    id: 13,
   },
 ];
 

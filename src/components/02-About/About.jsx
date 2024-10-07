@@ -45,7 +45,12 @@ export default function About() {
 
       <div className="instructorContents">
         <Row className="aboutUsTeam text-center">
-          <Col md={12}>
+          <Col
+            md={12}
+            className="mb-5"
+            data-aos="flip-left"
+            data-aos-delay="200"
+          >
             <h4>Our Team</h4>
             <p>
               <span>“The Master of Mindful Movement!“</span>
@@ -65,7 +70,7 @@ export default function About() {
           <div className="d-flex flex-column col-lg-6 justify-content-center order-2 order-lg-2">
             <div className="aboutInstructor text-justify">
               <div className="deepika-intro">
-                <p>
+                <p className="mt-4">
                   Introducing{" "}
                   <strong style={{ color: "#f95005" }}>Mrs. Deepika</strong>,
                   who is all knowledge in the area of yoga. Deepika began
