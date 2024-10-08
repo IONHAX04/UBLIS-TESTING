@@ -161,13 +161,16 @@ const Card = ({ card }) => {
   return (
     <div
       key={card.id}
-      className="group relative h-[450px] w-[450px] overflow-hidden bg-neutral-200"
+      className="group relative h-[350px] w-[350px] overflow-hidden bg-neutral-200"
+      style={{ borderRadius: "15px" }}
     >
       <div
         style={{
           backgroundImage: `url(${card.url})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
+          border: "1px solid #0000004a",
+          borderRadius: "15px",
         }}
         className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
       ></div>
