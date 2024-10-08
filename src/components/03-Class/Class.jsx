@@ -1,17 +1,11 @@
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
 
-import { Container, Row, Col, OverlayTrigger, Tooltip } from "react-bootstrap";
+import { Container, Button, Card, Row, Col } from "react-bootstrap";
+
+import { useNavigate } from "react-router-dom";
 
 import PropTypes from "prop-types";
-
-import Picture1 from "../../assets/logo/logo.png";
-import Picture2 from "../../assets/classes/kids.png";
-import Picture3 from "../../assets/classes/ladies.png";
-import Picture4 from "../../assets/classes/unisex.png";
-import Picture5 from "../../assets/classes/senior.png";
-import Picture6 from "../../assets/classes/pregnancy.png";
-import Picture7 from "../../assets/classes/pranayama.png";
 
 import off1 from "../../assets/classes/asanas/13.png";
 import off2 from "../../assets/classes/asanas/12.png";
@@ -33,39 +27,215 @@ import fee from "../../assets/schedules/fee.jpeg";
 import "./Class.css";
 
 export default function Class() {
-  const container = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: container,
-    offset: ["start start", "end end"],
-  });
-
-  const scale4 = useTransform(scrollYProgress, [0, 1], [1, 4]);
-  const scale5 = useTransform(scrollYProgress, [0, 1], [1, 5]);
-  const scale6 = useTransform(scrollYProgress, [0, 1], [1, 6]);
-  const scale8 = useTransform(scrollYProgress, [0, 1], [1, 8]);
-  const scale9 = useTransform(scrollYProgress, [0, 1], [1, 9]);
-
-  const pictures = [
-    { src: Picture1, scale: scale4 },
-    { src: Picture2, scale: scale5 },
-    { src: Picture3, scale: scale6 },
-    { src: Picture4, scale: scale5 },
-    { src: Picture5, scale: scale6 },
-    { src: Picture6, scale: scale8 },
-    { src: Picture7, scale: scale9 },
+  const navigate = useNavigate();
+  const cardData = [
+    {
+      id: 1,
+      url: "https://via.placeholder.com/100",
+      title: "Kids Yoga",
+      description:
+        "Yoga designed specifically for children to improve flexibility and focus.",
+      buttonText: "Join Now",
+    },
+    {
+      id: 2,
+      url: "https://via.placeholder.com/100",
+      title: "Ladies Yoga",
+      description: "Strength-building yoga sessions tailored for women.",
+      buttonText: "Join Now",
+    },
+    {
+      id: 3,
+      url: "https://via.placeholder.com/100",
+      title: "Unisex Yoga",
+      description:
+        "A mixed yoga class for all to promote calmness and balance.",
+      buttonText: "Join Now",
+    },
+    {
+      id: 4,
+      url: "https://via.placeholder.com/100",
+      title: "Senior Citizen Yoga",
+      description:
+        "Gentle yoga for seniors focusing on relaxation and well-being.",
+      buttonText: "Join Now",
+    },
+    {
+      id: 5,
+      url: "https://via.placeholder.com/100",
+      title: "Pregnancy Yoga",
+      description:
+        "Yoga sessions to support the physical and mental health of expecting mothers.",
+      buttonText: "Join Now",
+    },
+    {
+      id: 6,
+      url: "https://via.placeholder.com/100",
+      title: "Meditation Sessions",
+      description: "Mindfulness and meditation practices to reduce stress.",
+      buttonText: "Join Now",
+    },
+    {
+      id: 7,
+      url: "https://via.placeholder.com/100",
+      title: "Pranayama",
+      description: "Breathing exercises that improve energy flow and focus.",
+      buttonText: "Join Now",
+    },
   ];
+
+  const cardData2 = [
+    {
+      id: 1,
+      url: "https://via.placeholder.com/100",
+      title: "Preparatory Movements – Warmups",
+      description:
+        "Yoga designed specifically for children to improve flexibility and focus.",
+      buttonText: "Join Now",
+    },
+    {
+      id: 2,
+      url: "https://via.placeholder.com/100",
+      title: "Surya Namaskar",
+      description: "Strength-building yoga sessions tailored for women.",
+      buttonText: "Join Now",
+    },
+    {
+      id: 3,
+      url: "https://via.placeholder.com/100",
+      title: "Chandra Namaskar",
+      description:
+        "A mixed yoga class for all to promote calmness and balance.",
+      buttonText: "Join Now",
+    },
+    {
+      id: 4,
+      url: "https://via.placeholder.com/100",
+      title: "Modification of Surya Namaskar",
+      description:
+        "Gentle yoga for seniors focusing on relaxation and well-being.",
+      buttonText: "Join Now",
+    },
+    {
+      id: 5,
+      url: "https://via.placeholder.com/100",
+      title: "Cardio Surya Namaskar",
+      description:
+        "Yoga sessions to support the physical and mental health of expecting mothers.",
+      buttonText: "Join Now",
+    },
+    {
+      id: 6,
+      url: "https://via.placeholder.com/100",
+      title: "Vinyasa Flow",
+      description: "Mindfulness and meditation practices to reduce stress.",
+      buttonText: "Join Now",
+    },
+    {
+      id: 7,
+      url: "https://via.placeholder.com/100",
+      title: "Power Yoga",
+      description: "Breathing exercises that improve energy flow and focus.",
+      buttonText: "Join Now",
+    },
+    {
+      id: 8,
+      url: "https://via.placeholder.com/100",
+      title: "Asanas – Sitting/Standing/Prone",
+      description: "Breathing exercises that improve energy flow and focus.",
+      buttonText: "Join Now",
+    },
+    {
+      id: 9,
+      url: "https://via.placeholder.com/100",
+      title: "Kriyas",
+      description: "Breathing exercises that improve energy flow and focus.",
+      buttonText: "Join Now",
+    },
+    {
+      id: 10,
+      url: "https://via.placeholder.com/100",
+      title: "Bandham",
+      description: "Breathing exercises that improve energy flow and focus.",
+      buttonText: "Join Now",
+    },
+    {
+      id: 11,
+      url: "https://via.placeholder.com/100",
+      title: "Pranayama",
+      description: "Breathing exercises that improve energy flow and focus.",
+      buttonText: "Join Now",
+    },
+    {
+      id: 12,
+      url: "https://via.placeholder.com/100",
+      title: "Meditation",
+      description: "Breathing exercises that improve energy flow and focus.",
+      buttonText: "Join Now",
+    },
+    {
+      id: 13,
+      url: "https://via.placeholder.com/100",
+      title: "Relaxation",
+      description: "Breathing exercises that improve energy flow and focus.",
+      buttonText: "Join Now",
+    },
+    {
+      id: 14,
+      url: "https://via.placeholder.com/100",
+      title: "Yoga Nidra",
+      description: "Breathing exercises that improve energy flow and focus.",
+      buttonText: "Join Now",
+    },
+  ];
+  const handleButtonClick = () => {
+    navigate("/contact");
+    window.scrollTo(0, 0);
+  };
 
   return (
     <div>
-      <div ref={container} className="containers">
-        <div className="sticky">
-          {pictures.map(({ src, scale }, index) => (
-            <motion.div key={index} style={{ scale }} className="el">
-              <div className="imageContainer">
-                <img src={src} alt={`image ${index + 1}`} className="image" />
-              </div>
-            </motion.div>
-          ))}
+      <div className="ourClassesWeOffered">
+        <div className="offeredCont">
+          <h3>Our Classes</h3>
+          <Container>
+            <Row className="gy-4 col-lg-7" style={{ justifyContent: "center" }}>
+              {cardData.map((card) => (
+                <Col
+                  lg={4}
+                  md={6}
+                  key={card.id}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
+                  <Card
+                    style={{
+                      width: "19rem",
+                      height: "16rem",
+                    }}
+                  >
+                    <Card.Img
+                      variant="top"
+                      src={card.url}
+                      style={{
+                        height: "150px",
+                        objectFit: "cover",
+                      }}
+                    />
+                    <Card.Body style={{ textAlign: "center" }}>
+                      <Card.Title>{card.title}</Card.Title>
+                      <Button variant="primary" onClick={handleButtonClick}>
+                        {card.buttonText}
+                      </Button>
+                    </Card.Body>
+                  </Card>
+                </Col>
+              ))}
+            </Row>
+          </Container>
         </div>
       </div>
 
@@ -104,7 +274,49 @@ export default function Class() {
         </Row>
       </Container>
 
-      <HorizontalScrollCarousel />
+      <div className="whatWeCover">
+        <h2>What We Cover In Our Sessions</h2>
+        <Container>
+          <Row className="gy-4 col-lg-10" style={{ justifyContent: "center" }}>
+            {cardData2.map((card) => (
+              <Col
+                lg={3}
+                md={6}
+                key={card.id}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <Card
+                  data-aos="flip-left"
+                  data-aos-delay="100"
+                  style={{
+                    width: "19rem",
+                    height: "14rem",
+                  }}
+                >
+                  <Card.Img
+                    variant="top"
+                    src={card.url}
+                    style={{
+                      height: "150px",
+                      objectFit: "cover",
+                    }}
+                  />
+                  <Card.Body style={{ textAlign: "center" }}>
+                    <Card.Title>{card.title}</Card.Title>
+                    {/* <Button variant="primary" onClick={handleButtonClick}>
+                      {card.buttonText}
+                    </Button> */}
+                  </Card.Body>
+                </Card>
+              </Col>
+            ))}
+          </Row>
+        </Container>
+      </div>
 
       <div className="feeStructure">
         <h3>Class Schedules & Fee Structure</h3>
@@ -149,7 +361,7 @@ const HorizontalScrollCarousel = () => {
       <div className="sticky top-0 flex h-screen contentBox items-center overflow-hidden">
         <motion.div style={{ x }} className="flex gap-4">
           {cards.map((card) => {
-            return <Card card={card} key={card.id} />;
+            return <Cards card={card} key={card.id} />;
           })}
         </motion.div>
       </div>
@@ -157,7 +369,7 @@ const HorizontalScrollCarousel = () => {
   );
 };
 
-const Card = ({ card }) => {
+const Cards = ({ card }) => {
   return (
     <div
       key={card.id}
@@ -174,11 +386,6 @@ const Card = ({ card }) => {
         }}
         className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
       ></div>
-      {/* <div className="absolute inset-0 z-10 grid place-content-center">
-        <p className="bg-gradient-to-br from-white/20 to-white/0 p-8 text-6xl font-black uppercase text-white backdrop-blur-lg">
-          {card.title}
-        </p>
-      </div> */}
     </div>
   );
 };
@@ -251,7 +458,7 @@ const cards = [
   },
 ];
 
-Card.propTypes = {
+Cards.propTypes = {
   card: PropTypes.shape({
     id: PropTypes.number.isRequired,
     url: PropTypes.string.isRequired,

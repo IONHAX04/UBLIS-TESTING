@@ -1,19 +1,19 @@
 .containers {
-  height: 300vh;
+  block-size: 300vh;
   position: relative;
 }
 
 .sticky {
   position: sticky;
   overflow: hidden;
-  top: 0;
-  height: 100vh;
+  inset-block-start: 0;
+  block-size: 100vh;
 }
 
 .el {
-  width: 100%;
-  height: 100%;
-  top: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  inset-block-start: 0;
   position: absolute;
   display: flex;
   align-items: center;
@@ -21,133 +21,133 @@
 }
 
 .contentBox {
-  height: 70vh !important;
+  block-size: 70vh !important;
 }
 
 .imageContainer {
   position: relative;
-  width: 25vw;
-  height: 25vh;
-  margin-top: 150px;
+  inline-size: 25vw;
+  block-size: 25vh;
+  margin-block-start: 150px;
 }
 
 .imageContainer img {
   object-fit: contain;
-  width: 100%;
-  height: 100%;
+  inline-size: 100%;
+  block-size: 100%;
 }
 
 .h-screen {
-  height: 70vh !important;
+  block-size: 70vh !important;
 }
 
 /* Styles for the 2nd image */
 .el:nth-of-type(2) .imageContainer {
-  top: -30vh;
-  left: 5vw;
-  width: 45vw;
-  height: 40vh;
+  inset-block-start: -30vh;
+  inset-inline-start: 5vw;
+  inline-size: 45vw;
+  block-size: 40vh;
 }
 
 /* Styles for the 3rd image */
 .el:nth-of-type(3) .imageContainer {
-  top: -10vh;
-  left: -25vw;
-  width: 40vw;
-  height: 50vh;
+  inset-block-start: -10vh;
+  inset-inline-start: -25vw;
+  inline-size: 40vw;
+  block-size: 50vh;
 }
 
 /* Styles for the 4th image */
 .el:nth-of-type(4) .imageContainer {
-  left: 20.5vw;
-  width: 40vw;
-  height: 35vh;
+  inset-inline-start: 20.5vw;
+  inline-size: 40vw;
+  block-size: 35vh;
 }
 
 /* Styles for the 5th image */
 .el:nth-of-type(5) .imageContainer {
-  top: 26.5vh;
-  left: 5vw;
-  width: 30vw;
-  height: 30vh;
+  inset-block-start: 26.5vh;
+  inset-inline-start: 5vw;
+  inline-size: 30vw;
+  block-size: 30vh;
 }
 
 /* Styles for the 6th image */
 .el:nth-of-type(6) .imageContainer {
-  top: 27.5vh;
-  left: -22.5vw;
-  width: 40vw;
-  height: 30vh;
+  inset-block-start: 27.5vh;
+  inset-inline-start: -22.5vw;
+  inline-size: 40vw;
+  block-size: 30vh;
 }
 
 /* Styles for the 7th image */
 .el:nth-of-type(7) .imageContainer {
-  top: 26.5vh;
-  left: 25vw;
-  width: 40vw;
-  height: 30vh;
+  inset-block-start: 26.5vh;
+  inset-inline-start: 25vw;
+  inline-size: 40vw;
+  block-size: 30vh;
 }
 
 @media only screen and (max-width: 480px) {
   .imageContainer {
     position: relative;
-    width: 65vw;
-    height: 25vh;
-    margin-top: 0;
+    inline-size: 65vw;
+    block-size: 25vh;
+    margin-block-start: 0;
   }
 
   .imageContainer img {
     object-fit: contain;
-    width: 100%;
-    height: 100%;
+    inline-size: 100%;
+    block-size: 100%;
   }
 
   /* Styles for the 2nd image */
   .el:nth-of-type(2) .imageContainer {
-    top: -20vh;
-    left: 5vw;
-    width: 35vw;
-    height: 30vh;
+    inset-block-start: -20vh;
+    inset-inline-start: 5vw;
+    inline-size: 35vw;
+    block-size: 30vh;
   }
 
   /* Styles for the 3rd image */
   .el:nth-of-type(3) .imageContainer {
-    top: -13vh;
-    left: -25vw;
-    width: 30vw;
-    height: 45vh;
+    inset-block-start: -13vh;
+    inset-inline-start: -25vw;
+    inline-size: 30vw;
+    block-size: 45vh;
   }
 
   /* Styles for the 4th image */
   .el:nth-of-type(4) .imageContainer {
-    left: 35vw;
-    top: -12vh;
-    width: 25vw;
-    height: 25vh;
+    inset-inline-start: 35vw;
+    inset-block-start: -12vh;
+    inline-size: 25vw;
+    block-size: 25vh;
   }
 
   /* Styles for the 5th image */
   .el:nth-of-type(5) .imageContainer {
-    top: 18vh;
-    left: 5vw;
-    width: 30vw;
-    height: 25vh;
+    inset-block-start: 18vh;
+    inset-inline-start: 5vw;
+    inline-size: 30vw;
+    block-size: 25vh;
   }
 
   /* Styles for the 6th image */
   .el:nth-of-type(6) .imageContainer {
-    top: 25vh;
-    left: -27vw;
-    width: 40vw;
-    height: 25vh;
+    inset-block-start: 25vh;
+    inset-inline-start: -27vw;
+    inline-size: 40vw;
+    block-size: 25vh;
   }
 
   /* Styles for the 7th image */
   .el:nth-of-type(7) .imageContainer {
-    top: 24.5vh;
-    left: 35vw;
-    width: 30vw;
-    height: 25vh;
+    inset-block-start: 24.5vh;
+    inset-inline-start: 35vw;
+    inline-size: 30vw;
+    block-size: 25vh;
   }
 }
 
@@ -165,21 +165,21 @@
   align-items: center;
   justify-content: center;
   border-radius: 18px;
-  border-bottom: 5px solid #ffffff;
-  height: 100%;
+  border-block-end: 5px solid #ffffff;
+  block-size: 100%;
 }
 
 .service-item .icon {
   color: #ffffff;
   background: #f95005;
   margin: 0;
-  width: 64px;
-  height: 64px;
+  inline-size: 64px;
+  block-size: 64px;
   border-radius: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-block-end: 20px;
   font-size: 28px;
   transition: ease-in-out 0.3s;
 }
@@ -199,7 +199,7 @@
 .service-item p {
   line-height: 24px;
   font-size: 14px;
-  margin-bottom: 0;
+  margin-block-end: 0;
 }
 
 @media (min-width: 1365px) {
@@ -235,7 +235,7 @@
 .classDetails .classContents p {
   font-size: 22px;
   text-align: center;
-  margin-bottom: 30px;
+  margin-block-end: 30px;
 }
 
 .homePageContxt {
@@ -269,8 +269,8 @@
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  min-height: 100vh;
-  width: 100%;
+  min-block-size: 100vh;
+  inline-size: 100%;
 }
 
 @supports (-webkit-overflow-scrolling: touch) {
@@ -284,10 +284,10 @@
 .categories::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  inline-size: 100%;
+  block-size: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 1;
 }
@@ -301,7 +301,7 @@
 .ourStoryCont h3,
 .whyChooseUs h3,
 .categories h3 {
-  padding-top: 30px;
+  padding-block-start: 30px;
   font-size: 30px;
   font-weight: bold;
   text-transform: uppercase;
@@ -313,8 +313,8 @@
 .categories p {
   font-size: 18px;
   text-align: center;
-  padding-bottom: 15px;
-  padding-top: 10px;
+  padding-block-end: 15px;
+  padding-block-start: 10px;
 }
 
 .categoriesCont h3,
@@ -375,5 +375,41 @@
 }
 
 .contentss .image img {
-  height: 700px;
+  block-size: 700px;
+}
+
+.ourClassesWeOffered {
+  padding-block-start: 130px;
+}
+
+.offeredCont .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.offeredCont h3 {
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 20px 10px 40px 10px;
+}
+
+.whatWeCover,
+.whatWeCover .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.whatWeCover {
+  flex-direction: column;
+}
+
+.whatWeCover h2 {
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 60px 10px 50px 10px;
 }
