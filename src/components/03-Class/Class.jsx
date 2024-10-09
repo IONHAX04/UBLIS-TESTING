@@ -24,6 +24,21 @@ import off13 from "../../assets/classes/asanas/1.png";
 import timing from "../../assets/schedules/class.jpeg";
 import fee from "../../assets/schedules/fee.jpeg";
 
+import yoganidra from "../../assets/newClass/yoganidra.png";
+import relaxation from "../../assets/newClass/relaxation.png";
+import pranayama from "../../assets/newClass/pranayama.png";
+import meditation from "../../assets/newClass/meditation.png";
+import asanas from "../../assets/newClass/asanas.png";
+import bandam from "../../assets/newClass/bandam.png";
+import cardio from "../../assets/newClass/cardio.png";
+import chandra from "../../assets/newClass/chandra.png";
+import kriyas from "../../assets/newClass/kriyas.png";
+import modification from "../../assets/newClass/modification.png";
+import power from "../../assets/newClass/power.png";
+import suryanamaskar from "../../assets/newClass/suryanamaskar.png";
+import vinyasa from "../../assets/newClass/vinyasa.png";
+import warm from "../../assets/newClass/warm.png";
+
 import "./Class.css";
 
 export default function Class() {
@@ -87,7 +102,7 @@ export default function Class() {
   const cardData2 = [
     {
       id: 1,
-      url: "https://via.placeholder.com/100",
+      url: warm,
       title: "Preparatory Movements – Warmups",
       description:
         "Yoga designed specifically for children to improve flexibility and focus.",
@@ -95,14 +110,14 @@ export default function Class() {
     },
     {
       id: 2,
-      url: "https://via.placeholder.com/100",
+      url: suryanamaskar,
       title: "Surya Namaskar",
       description: "Strength-building yoga sessions tailored for women.",
       buttonText: "Join Now",
     },
     {
       id: 3,
-      url: "https://via.placeholder.com/100",
+      url: chandra,
       title: "Chandra Namaskar",
       description:
         "A mixed yoga class for all to promote calmness and balance.",
@@ -110,7 +125,7 @@ export default function Class() {
     },
     {
       id: 4,
-      url: "https://via.placeholder.com/100",
+      url: modification,
       title: "Modification of Surya Namaskar",
       description:
         "Gentle yoga for seniors focusing on relaxation and well-being.",
@@ -118,7 +133,7 @@ export default function Class() {
     },
     {
       id: 5,
-      url: "https://via.placeholder.com/100",
+      url: cardio,
       title: "Cardio Surya Namaskar",
       description:
         "Yoga sessions to support the physical and mental health of expecting mothers.",
@@ -126,63 +141,63 @@ export default function Class() {
     },
     {
       id: 6,
-      url: "https://via.placeholder.com/100",
+      url: vinyasa,
       title: "Vinyasa Flow",
       description: "Mindfulness and meditation practices to reduce stress.",
       buttonText: "Join Now",
     },
     {
       id: 7,
-      url: "https://via.placeholder.com/100",
+      url: power,
       title: "Power Yoga",
       description: "Breathing exercises that improve energy flow and focus.",
       buttonText: "Join Now",
     },
     {
       id: 8,
-      url: "https://via.placeholder.com/100",
+      url: asanas,
       title: "Asanas – Sitting/Standing/Prone",
       description: "Breathing exercises that improve energy flow and focus.",
       buttonText: "Join Now",
     },
     {
       id: 9,
-      url: "https://via.placeholder.com/100",
+      url: kriyas,
       title: "Kriyas",
       description: "Breathing exercises that improve energy flow and focus.",
       buttonText: "Join Now",
     },
     {
       id: 10,
-      url: "https://via.placeholder.com/100",
+      url: bandam,
       title: "Bandham",
       description: "Breathing exercises that improve energy flow and focus.",
       buttonText: "Join Now",
     },
     {
       id: 11,
-      url: "https://via.placeholder.com/100",
+      url: pranayama,
       title: "Pranayama",
       description: "Breathing exercises that improve energy flow and focus.",
       buttonText: "Join Now",
     },
     {
       id: 12,
-      url: "https://via.placeholder.com/100",
+      url: meditation,
       title: "Meditation",
       description: "Breathing exercises that improve energy flow and focus.",
       buttonText: "Join Now",
     },
     {
       id: 13,
-      url: "https://via.placeholder.com/100",
+      url: relaxation,
       title: "Relaxation",
       description: "Breathing exercises that improve energy flow and focus.",
       buttonText: "Join Now",
     },
     {
       id: 14,
-      url: "https://via.placeholder.com/100",
+      url: yoganidra,
       title: "Yoga Nidra",
       description: "Breathing exercises that improve energy flow and focus.",
       buttonText: "Join Now",
