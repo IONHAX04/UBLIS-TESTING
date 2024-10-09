@@ -39,6 +39,8 @@ import suryanamaskar from "../../assets/newClass/suryanamaskar.png";
 import vinyasa from "../../assets/newClass/vinyasa.png";
 import warm from "../../assets/newClass/warm.png";
 
+import kids from "../../assets/newYoga/kids.png";
+
 import "./Class.css";
 
 export default function Class() {
@@ -46,7 +48,7 @@ export default function Class() {
   const cardData = [
     {
       id: 1,
-      url: "https://via.placeholder.com/100",
+      url: kids,
       title: "Kids Yoga",
       description:
         "Yoga designed specifically for children to improve flexibility and focus.",

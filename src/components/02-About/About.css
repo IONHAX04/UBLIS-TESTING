@@ -66,3 +66,9 @@
   -webkit-text-stroke-width: 0.3px;
   -webkit-text-stroke-color: white;
 }
+
+.yogaHead {
+  font-size: 22px !important;
+  text-transform: uppercase;
+  font-weight: bold;
+}

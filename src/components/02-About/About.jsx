@@ -6,8 +6,8 @@ import instructor from "../../assets/about/deepika.png";
 
 import { Row, Col } from "react-bootstrap";
 
-import ourJourney from "../../assets/about/ourJourney.png";
-import mission from "../../assets/about/mission.png";
+import ourJourney from "../../assets/about/aboutUs.png";
+import mission from "../../assets/about/missions.png";
 
 import "./About.css";
 
@@ -91,7 +91,7 @@ export default function About() {
                   filled with in-depth understanding and practical know-how. She
                   is a
                   <strong style={{ color: "#f95005" }}>
-                    certified Independent Pre & Postnatal Yoga Teacher
+                    &nbsp; certified Independent Pre & Postnatal Yoga Teacher
                   </strong>{" "}
                   who takes care of expectant mothers and mothers with newborns
                   from both physical and psychological angles, aiding their
@@ -99,15 +99,15 @@ export default function About() {
                   <strong style={{ color: "#f95005" }}> rehabilitation</strong>.
                 </p>
 
+                <h3 className="yogaHead mb-3">Yoga Therapy trainings</h3>
                 <p>
-                  Yoga Therapy trainings, &nbsp;
                   <strong style={{ color: "#f95005" }}>
-                    a Post Graduate Diploma
+                    A Post Graduate Diploma
                   </strong>{" "}
                   in Yoga Philosophy and Psychology, and a
                   <strong style={{ color: "#f95005" }}>
                     {" "}
-                    Fitness and Nutrition Advanced Diploma
+                    Fitness and Nutrition Advanced Diploma&nbsp;
                   </strong>
                   add to her impressive repertoire, by which she is able to take
                   care of all aspects of one’s wellness—body, mind, and
