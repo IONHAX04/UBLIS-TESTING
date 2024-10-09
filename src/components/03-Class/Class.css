@@ -396,6 +396,10 @@
   margin: 20px 10px 40px 10px;
 }
 
+.card-title{
+  font-size: 1.2rem !important;
+}
+
 .whatWeCover,
 .whatWeCover .container {
   display: flex;
