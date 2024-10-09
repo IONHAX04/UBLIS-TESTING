@@ -42,10 +42,11 @@ function App() {
       label: "Whatsapp",
       icon: "pi pi-whatsapp",
       command: () => {
+        window.open("https://wa.me/919940063000", "_blank");
         toast.current.show({
           severity: "success",
           summary: "Whatsapp",
-          detail: "Redirected to whatsapp...",
+          detail: "Redirected to Whatsapp...",
         });
       },
     },
@@ -53,6 +54,7 @@ function App() {
       label: "Email",
       icon: "pi pi-envelope",
       command: () => {
+        window.open("mailto:ublisyoga@gmail.com", "_blank");
         toast.current.show({
           severity: "info",
           summary: "Email",
@@ -64,6 +66,7 @@ function App() {
       label: "Instagram",
       icon: "pi pi-instagram",
       command: () => {
+        window.open("https://www.instagram.com/ublis_yoga/", "_blank");
         toast.current.show({
           severity: "error",
           summary: "Instagram",
@@ -75,6 +78,7 @@ function App() {
       label: "Phone",
       icon: "pi pi-phone",
       command: () => {
+        window.open("tel:+919940063000", "_blank");
         toast.current.show({
           severity: "info",
           summary: "Phone",
