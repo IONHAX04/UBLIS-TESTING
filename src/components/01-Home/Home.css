@@ -97,10 +97,10 @@
 
 .getStartedBtn {
   font-size: 20px;
-  border: 1px solid #f95005;
   padding: 10px 30px;
   border-radius: 9px;
-  color: #f95005;
+  background-color: #f95005;
+  color: #ffffff;
 }
 
 section {
