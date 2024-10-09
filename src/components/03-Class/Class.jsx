@@ -40,6 +40,11 @@ import vinyasa from "../../assets/newClass/vinyasa.png";
 import warm from "../../assets/newClass/warm.png";
 
 import kids from "../../assets/newYoga/kids.png";
+import ladies from "../../assets/newYoga/ladies.png";
+import senior from "../../assets/newYoga/senior.png";
+import unisex from "../../assets/newYoga/unisex.png";
+import pranayamaImg from "../../assets/newYoga/pranayama.png";
+import pregnancy from "../../assets/newYoga/pregnancy.png";
 
 import "./Class.css";
 
@@ -56,14 +61,14 @@ export default function Class() {
     },
     {
       id: 2,
-      url: "https://via.placeholder.com/100",
+      url: ladies,
       title: "Ladies Yoga",
       description: "Strength-building yoga sessions tailored for women.",
       buttonText: "Join Now",
     },
     {
       id: 3,
-      url: "https://via.placeholder.com/100",
+      url: unisex,
       title: "Unisex Yoga",
       description:
         "A mixed yoga class for all to promote calmness and balance.",
@@ -71,7 +76,7 @@ export default function Class() {
     },
     {
       id: 4,
-      url: "https://via.placeholder.com/100",
+      url: senior,
       title: "Senior Citizen Yoga",
       description:
         "Gentle yoga for seniors focusing on relaxation and well-being.",
@@ -79,7 +84,7 @@ export default function Class() {
     },
     {
       id: 5,
-      url: "https://via.placeholder.com/100",
+      url: pregnancy,
       title: "Pregnancy Yoga",
       description:
         "Yoga sessions to support the physical and mental health of expecting mothers.",
@@ -87,14 +92,14 @@ export default function Class() {
     },
     {
       id: 6,
-      url: "https://via.placeholder.com/100",
+      url: meditation,
       title: "Meditation Sessions",
       description: "Mindfulness and meditation practices to reduce stress.",
       buttonText: "Join Now",
     },
     {
       id: 7,
-      url: "https://via.placeholder.com/100",
+      url: pranayamaImg,
       title: "Pranayama",
       description: "Breathing exercises that improve energy flow and focus.",
       buttonText: "Join Now",
