@@ -405,6 +405,7 @@ section {
 
 .whoWeArePara {
   /* text-indent: 2rem; */
+  color: black;
 }
 
 .whoWeAre .container .whoWeAreItems {
