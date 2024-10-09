@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { AnimatePresence, motion } from "framer-motion";
 
-import logo from "../../assets/logo/logo.png";
+import logo from "../../assets/logos/Ublis Yoga - Logo 2.png";
 
 export default function Header() {
   const [headerBg, setHeaderBg] = useState("transparent");
@@ -136,7 +136,7 @@ export default function Header() {
           }}
         >
           <div className="flex items-center gap-[1ch] p-2">
-            <img src={logo} height={90} width={90} />
+            <img src={logo} height={150} width={250} />
           </div>
           <div
             className="lg:flex navbarLinks hidden gap-12 text-md text-[#000000] cursor-pointer"
