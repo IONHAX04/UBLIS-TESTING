@@ -121,7 +121,8 @@ export default function Header() {
       <header
         className=""
         style={{
-          backdropFilter: headerBg,
+          // backdropFilter: headerBg,
+          background: "#ffffff",
           zIndex: "100",
           position: "fixed",
           width: "100%",

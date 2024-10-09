@@ -96,9 +96,10 @@ export default function Gallery() {
             Welcome to our serene and beautiful space. Our gallery showcases the
             tranquil environment and the positive energy that surrounds our yoga
             studio. Feel free to take a virtual tour and explore the calming
-            ambiance that awaits you at My Site
+            ambiance that awaits you at our site.
           </p>
         </div>
+        <h4>Surrounds our yoga studio and events</h4>
 
         <div className="container galleryIsotopeContainer ms-5 me-5">
           <div

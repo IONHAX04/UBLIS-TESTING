@@ -37,7 +37,7 @@ export default function About() {
         heading="Our Mission."
       >
         <ExampleContent
-          title="“Enhancement of Body, mind and soul” "
+          title="Enhancement of Body, mind and soul "
           description="Practicing yoga is our mission to help each and every participant who is with us to attain general well-being and eternal tranquility. "
           buttonText=""
         />
@@ -66,7 +66,7 @@ export default function About() {
           />
           <br />
           <h5 className="instructorName">Mrs. Deepika</h5>
-          <p className="instructorRole">Lead Instructor</p>
+          <p className="instructorRole">Founder & Lead Yoga Therapist</p>
           <div className="d-flex flex-column col-lg-6 justify-content-center order-2 order-lg-2">
             <div className="aboutInstructor text-justify">
               <div className="deepika-intro">
@@ -83,49 +83,53 @@ export default function About() {
 
                 <p>
                   Deepika holds a
-                  <strong style={{ color: "#f95005" }}>
+                  <strong style={{ color: "#000000" }}>
                     {" "}
                     Master of Science degree
                   </strong>{" "}
-                  in both Yoga and Yoga Therapy, and every class she takes is
-                  filled with in-depth understanding and practical know-how. She
-                  is a
+                  in both
                   <strong style={{ color: "#f95005" }}>
-                    &nbsp; certified Independent Pre & Postnatal Yoga Teacher
+                    &nbsp;Yoga and Yoga Therapy,&nbsp;
+                  </strong>
+                  and every class she takes is filled with in-depth
+                  understanding and practical know-how. She is a certified
+                  Independent
+                  <strong style={{ color: "#f95005" }}>
+                    &nbsp; Pre & Postnatal Yoga Teacher
                   </strong>{" "}
                   who takes care of expectant mothers and mothers with newborns
                   from both physical and psychological angles, aiding their
-                  <strong style={{ color: "#f95005" }}> recovery</strong> and
-                  <strong style={{ color: "#f95005" }}> rehabilitation</strong>.
+                  recovery and rehabilitation.
                 </p>
 
-                <h3 className="yogaHead mb-3">Yoga Therapy trainings</h3>
+                {/* <h3 className="yogaHead mb-3">Yoga Therapy trainings</h3> */}
                 <p>
-                  <strong style={{ color: "#f95005" }}>
-                    A Post Graduate Diploma
+                  A&nbsp;
+                  <strong style={{ color: "#000000" }}>
+                    Post Graduate Diploma
                   </strong>{" "}
-                  in Yoga Philosophy and Psychology, and a
+                  in
+                  <strong style={{ color: "#f95005" }}>
+                    &nbsp;Yoga Philosophy and Psychology,&nbsp;
+                  </strong>
+                  and a
                   <strong style={{ color: "#f95005" }}>
                     {" "}
-                    Fitness and Nutrition Advanced Diploma&nbsp;
+                    Fitness and Nutrition &nbsp;
+                  </strong>
+                  <strong style={{ color: "#000000" }}>
+                    Advanced Diploma &nbsp;
                   </strong>
                   add to her impressive repertoire, by which she is able to take
                   care of all aspects of one’s wellness—body, mind, and
-                  spirit—in a very
-                  <strong style={{ color: "#f95005" }}> balanced manner</strong>
-                  .
+                  spirit—in a very balanced manner.
                 </p>
 
                 <p>
-                  With Deepika as your guide, you’ll be in
-                  <strong style={{ color: "#f95005" }}> expert hands</strong>,
-                  gently led toward a path of mindfulness, balance, and
-                  transformation. Make use of her guidance to find, restore, and
-                  <strong style={{ color: "#f95005" }}>
-                    {" "}
-                    transform yourself
-                  </strong>
-                  .
+                  With Deepika as your guide, you’ll be in expert hands, gently
+                  led toward a path of mindfulness, balance, and transformation.
+                  Make use of her guidance to find, restore, and transform
+                  yourself .
                 </p>
               </div>
             </div>
@@ -239,7 +243,12 @@ OverlayCopy.propTypes = {
 
 const ExampleContent = ({ title, description, buttonText }) => (
   <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12">
-    <h2 className="col-span-1 text-3xl font-bold md:col-span-4">{title}</h2>
+    <h2
+      className="col-span-1 text-3xl font-bold md:col-span-4"
+      style={{ color: "#f95005" }}
+    >
+      {title}
+    </h2>
     <div className="col-span-1 md:col-span-8">
       <p
         className="mb-4 text-xl text-neutral-600 md:text-2xl"

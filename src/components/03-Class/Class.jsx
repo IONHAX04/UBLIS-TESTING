@@ -249,9 +249,12 @@ export default function Class() {
                     />
                     <Card.Body style={{ textAlign: "center" }}>
                       <Card.Title>{card.title}</Card.Title>
-                      <Button variant="primary" onClick={handleButtonClick}>
+                      <button
+                        className="viewContactBtn"
+                        onClick={handleButtonClick}
+                      >
                         {card.buttonText}
-                      </Button>
+                      </button>
                     </Card.Body>
                   </Card>
                 </Col>

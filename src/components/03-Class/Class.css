@@ -31,6 +31,14 @@
   margin-block-start: 150px;
 }
 
+.viewContactBtn {
+  border: 1px solid #f95005;
+  background: #f95005;
+  color: white;
+  padding: 7px 25px;
+  border-radius: 8px;
+}
+
 .imageContainer img {
   object-fit: contain;
   inline-size: 100%;
@@ -396,7 +404,7 @@
   margin: 20px 10px 40px 10px;
 }
 
-.card-title{
+.card-title {
   font-size: 1.2rem !important;
 }
 
@@ -415,5 +423,6 @@
   font-size: 30px;
   font-weight: bold;
   text-transform: uppercase;
+  text-align: center;
   margin: 60px 10px 50px 10px;
 }
