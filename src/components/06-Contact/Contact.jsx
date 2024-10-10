@@ -7,7 +7,6 @@ export default function Contact() {
     lastName: "", // Added a lastName field for completeness
     email: "",
     mobile: "", // Added mobile field to match with handleSubmit
-    subject: "",
     message: "",
   });
 
@@ -125,7 +124,7 @@ export default function Contact() {
                 onSubmit={handleSubmit}
               >
                 <div className="row gy-4">
-                  <h4>Email Us</h4>
+                  <h4>Reach Us on Whatsapp</h4>
                   <p>We'll Reach You Shortly!</p>
                   <div className="col-md-6">
                     <input
@@ -171,18 +170,6 @@ export default function Contact() {
                       placeholder="Your Mobile"
                       required
                       value={formData.mobile}
-                      onChange={handleChange}
-                    />
-                  </div>
-
-                  <div className="col-md-12">
-                    <input
-                      type="text"
-                      className="form-control"
-                      name="subject"
-                      placeholder="Subject"
-                      required
-                      value={formData.subject}
                       onChange={handleChange}
                     />
                   </div>

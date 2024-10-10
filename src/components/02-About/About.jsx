@@ -9,6 +9,8 @@ import { Row, Col } from "react-bootstrap";
 import ourJourney from "../../assets/about/aboutUs.png";
 import mission from "../../assets/about/missions.png";
 
+import profile from "../../assets/logo/logo.png";
+
 import "./About.css";
 
 // import mens from "../../assets/about/mens.png";
@@ -26,7 +28,7 @@ export default function About() {
       >
         <ExampleContent
           title="Journey..."
-          description="“Started in 2012, focusing more on women and children’s well-being, then later shifted to the focus of the Therapy”"
+          description="Started in 2012, focusing more on women and children’s well-being, then later shifted to the focus of the Therapy."
           buttonText="Our journey began with the vision that - to lead a healthy life, one does not only need to understand the ancient art of yoga but also incorporate it into modern lifestyle. A kin respect for the teachings of yoga is what weighs heavily on us. "
         />
       </TextParallaxContent>
@@ -45,25 +47,14 @@ export default function About() {
 
       <div className="instructorContents">
         <Row className="aboutUsTeam text-center">
-          <Col
-            md={12}
-            className="mb-5"
-            data-aos="flip-left"
-            data-aos-delay="200"
-          >
+          <Col md={12} className="mb-5">
             <h4>Our Team</h4>
             <p>
-              <span>“The Master of Mindful Movement!“</span>
+              <span>The Master of Mindful Movement!</span>
             </p>
           </Col>
 
-          <img
-            src={instructor}
-            className="mt-5 mb-2 instructorImg"
-            alt=""
-            data-aos="zoom-in"
-            data-aos-delay="100"
-          />
+          <img src={instructor} className="mt-1 mb-2 instructorImg" alt="" />
           <br />
           <h5 className="instructorName">Mrs. Deepika</h5>
           <p className="instructorRole">Founder & Lead Yoga Therapist</p>
@@ -91,7 +82,7 @@ export default function About() {
                   <strong style={{ color: "#f95005" }}>
                     &nbsp;Yoga and Yoga Therapy,&nbsp;
                   </strong>
-                  and every class she takes is filled with in-depth
+                  and every className she takes is filled with in-depth
                   understanding and practical know-how. She is a certified
                   Independent
                   <strong style={{ color: "#f95005" }}>
@@ -135,6 +126,73 @@ export default function About() {
             </div>
           </div>
         </Row>{" "}
+      </div>
+      <div className="teamSection">
+        <div id="team" className="team section col-lg-8">
+          <div className="container section-title" data-aos="fade-up">
+            <h2>Team Members</h2>
+          </div>
+
+          <div className="container">
+            <div className="row gy-4">
+              <div className="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                <div className="team-member d-flex align-items-start">
+                  <div className="pic">
+                    <img src={profile} className="img-fluid" alt="" />
+                  </div>
+                  <div className="member-info">
+                    <h4>Instructor Name</h4>
+                    <span>Instructor </span>
+                    <p>Instructor Description</p>
+                    <div className="social">
+                      <a href="">
+                        <i className="bi bi-twitter-x"></i>
+                      </a>
+                      <a href="">
+                        <i className="bi bi-facebook"></i>
+                      </a>
+                      <a href="">
+                        <i className="bi bi-instagram"></i>
+                      </a>
+                      <a href="">
+                        {" "}
+                        <i className="bi bi-linkedin"></i>{" "}
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                <div className="team-member d-flex align-items-start">
+                  <div className="pic">
+                    <img src={profile} className="img-fluid" alt="" />
+                  </div>
+                  <div className="member-info">
+                    <h4>Instructor Name</h4>
+                    <span>Instructor </span>
+                    <p>Instructor Description</p>
+                    <div className="social">
+                      <a href="">
+                        <i className="bi bi-twitter-x"></i>
+                      </a>
+                      <a href="">
+                        <i className="bi bi-facebook"></i>
+                      </a>
+                      <a href="">
+                        <i className="bi bi-instagram"></i>
+                      </a>
+                      <a href="">
+                        {" "}
+                        <i className="bi bi-linkedin"></i>{" "}
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -242,7 +300,7 @@ OverlayCopy.propTypes = {
 };
 
 const ExampleContent = ({ title, description, buttonText }) => (
-  <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12">
+  <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pt-2 pb-2 md:grid-cols-12">
     <h2
       className="col-span-1 text-3xl font-bold md:col-span-4"
       style={{ color: "#f95005" }}

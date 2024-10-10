@@ -90,7 +90,7 @@ export default function Gallery() {
         className="gallerySection section"
         style={{ marginBottom: "250px" }}
       >
-        <div className="container introSec" data-aos="fade-up">
+        <div className="container introSec">
           <h2>Our Space</h2>
           <p>
             Welcome to our serene and beautiful space. Our gallery showcases the
@@ -108,11 +108,7 @@ export default function Gallery() {
             data-layout="masonry"
             data-sort="original-order"
           >
-            <ul
-              className="gallerySection-filters isotope-filters"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
+            <ul className="gallerySection-filters isotope-filters">
               <li data-filter="*" className="filter-active">
                 All
               </li>
@@ -121,11 +117,7 @@ export default function Gallery() {
               <li data-filter=".videos">Videos</li>
             </ul>
 
-            <div
-              className="row gy-4 isotope-container"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
+            <div className="row gy-4 isotope-container">
               {[
                 {
                   src: beachYogaFour,
@@ -224,13 +216,13 @@ export default function Gallery() {
                   subHeading: "Lorem text",
                   type: "image",
                 },
-                {
-                  src: jawadhuHillsTen,
-                  title: "Jawadhu Hills - Yoga",
-                  filter: "filter-books",
-                  subHeading: "Lorem text",
-                  type: "image",
-                },
+                // {
+                //   src: jawadhuHillsTen,
+                //   title: "Jawadhu Hills - Yoga",
+                //   filter: "filter-books",
+                //   subHeading: "Lorem text",
+                //   type: "image",
+                // },
                 {
                   src: beachYogaSeven,
                   title: "Beach Yoga",
@@ -349,7 +341,7 @@ export default function Gallery() {
           <Modal.Title>{modalContent.title}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          {modalContent.title.includes("video") ? (
+          {modalContent.src.includes("video") ? (
             <video controls className="img-fluid">
               <source src={modalContent.src} type="video/mp4" />
               Your browser does not support the video tag.

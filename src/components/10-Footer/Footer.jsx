@@ -154,12 +154,10 @@ export default function Footer() {
                   >
                     <FaFacebook fontSize={20} />
                   </Nav.Link>
-                  <Nav.Link className="text-white">
-                    <FaXTwitter fontSize={20} />
-                  </Nav.Link>
+
                   <Nav.Link
                     className="text-white"
-                    href="https://wa.me/41767490039"
+                    href="https://wa.me/919940063000"
                     target="_blank"
                   >
                     <FaWhatsapp fontSize={20} />

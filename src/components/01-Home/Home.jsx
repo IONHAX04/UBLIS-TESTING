@@ -79,72 +79,74 @@ export default function Home() {
       </div>
 
       <div className="homePageContents">
-        <div className="w-[100%] pt-10">
-          <div className="flex flex-col lg:flex-row justify-center items-center mt-10">
-            <div
-              className="w-[100%] lg:w-[30%] h-[250px] lg:h-[300px] "
-              align="center"
-              data-aos="flip-left"
-              data-aos-delay="200"
-            >
-              <h1
+        <div className="homePageContentYoga">
+          <div className="w-[100%] pt-10">
+            <div className="flex flex-col lg:flex-row justify-center items-center mt-10">
+              <div
+                className="w-[100%] lg:w-[30%] h-[250px] lg:h-[300px] "
                 align="center"
-                className="text-[40px] font-bold text-[#f95005]"
+                data-aos="flip-left"
+                data-aos-delay="200"
               >
-                What is Yoga?
-              </h1>
-              <img
-                className="w-[40%] duration-300 hover:w-[35%] mt-10"
-                src={yogalogo}
-                alt="logo"
-              />
-            </div>
-            <div
-              className=" w-[90%] lg:w-[40%] h-[340px] lg:h-[400px] flex justify-center items-center"
-              data-aos="fade-up"
-              data-aos-delay="150"
-            >
-              <p className="text-[18px] text-[#000000] text-justify font-semibold">
-                Yoga is about bringing together the body, mind and soul as one.
-                It’s more than just physical exercise—it helps you stay
-                physically fit, mentally clear and emotionally balanced. Through
-                yoga, you can find a sense of inner peace and overall well-being
-                by connecting all parts of yourself.
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-col lg:flex-row justify-center items-center">
-            <div
-              className="w-[100%] lg:w-[30%] h-[250px] lg:h-[300px] "
-              align="center"
-              data-aos="flip-left"
-              data-aos-delay="200"
-            >
-              <h1
-                align="center"
-                className="text-[40px] font-bold text-[#f95005]"
-              >
-                What is Therapy?
-              </h1>
-              <img
-                className="w-[40%] duration-300 hover:w-[35%] mt-10"
-                src={therapy}
-                alt="logo"
-              />
-            </div>
-            <div className=" w-[90%] lg:w-[40%] h-[340px] lg:h-[400px] flex justify-center items-center">
-              <p
-                className="text-[18px] text-[#000000] text-justify font-semibold"
+                <h1
+                  align="center"
+                  className="text-[40px] font-bold text-[#f95005]"
+                >
+                  What is Yoga?
+                </h1>
+                <img
+                  className="w-[40%] duration-300 hover:w-[35%] mt-10"
+                  src={yogalogo}
+                  alt="logo"
+                />
+              </div>
+              <div
+                className=" w-[90%] lg:w-[40%] h-[340px] lg:h-[400px] flex justify-center items-center"
                 data-aos="fade-up"
                 data-aos-delay="150"
               >
-                Yoga Therapy is a customized approach to yoga that adapts poses,
-                breathing techniques and meditation to meet your individual
-                needs. It helps restore balance in the body, mind and soul,
-                bringing you back to a state of health and well-being. When
-                everything is in harmony—your body, mind and soul—you experience
-                true health and happiness.
-              </p>
+                <p className="text-[18px] text-[#000000] text-justify font-semibold">
+                  Yoga is about bringing together the body, mind and soul as
+                  one. It’s more than just physical exercise—it helps you stay
+                  physically fit, mentally clear and emotionally balanced.
+                  Through yoga, you can find a sense of inner peace and overall
+                  well-being by connecting all parts of yourself.
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-col lg:flex-row justify-center items-center">
+              <div
+                className="w-[100%] lg:w-[30%] h-[250px] lg:h-[300px] "
+                align="center"
+                data-aos="flip-left"
+                data-aos-delay="200"
+              >
+                <h1
+                  align="center"
+                  className="text-[40px] font-bold text-[#f95005]"
+                >
+                  What is Therapy?
+                </h1>
+                <img
+                  className="w-[40%] duration-300 hover:w-[35%] mt-10"
+                  src={therapy}
+                  alt="logo"
+                />
+              </div>
+              <div className=" w-[90%] lg:w-[40%] h-[340px] lg:h-[400px] flex justify-center items-center">
+                <p
+                  className="text-[18px] text-[#000000] text-justify font-semibold"
+                  data-aos="fade-up"
+                  data-aos-delay="150"
+                >
+                  Yoga Therapy is a customized approach to yoga that adapts
+                  poses, breathing techniques and meditation to meet your
+                  individual needs. It helps restore balance in the body, mind
+                  and soul, bringing you back to a state of health and
+                  well-being. When everything is in harmony—your body, mind and
+                  soul—you experience true health and happiness.
+                </p>
+              </div>
             </div>
           </div>
         </div>

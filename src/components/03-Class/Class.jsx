@@ -216,7 +216,7 @@ export default function Class() {
   };
 
   return (
-    <div>
+    <div className="class" style={{ background: "#f9f3eb" }}>
       <div className="ourClassesWeOffered">
         <div className="offeredCont">
           <h3>Our Classes</h3>

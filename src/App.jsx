@@ -108,7 +108,7 @@ function App() {
 
       <SpeedDial
         model={speedDialItems}
-        showIcon="pi pi-question"
+        showIcon="pi pi-whatsapp"
         hideIcon="pi pi-times"
         radius={120}
         type="quarter-circle"
