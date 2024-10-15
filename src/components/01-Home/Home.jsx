@@ -113,6 +113,27 @@ export default function Home() {
             </span>
           </h2>
         </div>
+
+        {/* <div className="gridFormTemp w-full">
+          <div className="ourStoryCont w-full md:w-6/12 mx-auto">
+            <h3>Our Story</h3>
+            <p>
+              Founded in (year ) , Brands New Outlet was born out of a passion
+              for fashion and a desire to bring global styles to Switzerland.
+              Starting as a small online store, we’ve grown into a trusted
+              platform that serves fashion enthusiasts across the country.{" "}
+            </p>
+            <p>
+              Building on quality, innovation, and customer satisfaction, we
+              improve our range and services and keep Brands New Outlet at the
+              heart of the Swiss fashion scene.{" "}
+            </p>
+          </div>
+          <div className="ourStoryBg w-full md:w-6/12 mx-auto">
+            <h4>Our Story</h4>
+          </div>
+        </div> */}
+
         <div className="welcomeUblis">
           <h2>
             Welcome To <br /> Ublis Yoga
@@ -144,7 +165,7 @@ export default function Home() {
               and environment to help you grow in your wellness journey.
             </p>
             <p className="col-lg-8 col-md-12">
-              "Explore, breathe, let go, and uncover the magic within!"
+              Explore, breathe, let go, and uncover the magic within!
             </p>
           </div>
         </div>
@@ -152,8 +173,8 @@ export default function Home() {
 
       <div className="homePageContents">
         <div className="homePageContentYoga">
-          <div className="w-[100%] pt-10">
-            <div className="flex flex-col lg:flex-row justify-center items-center mt-10">
+          <div className="w-[100%]">
+            <div className="flex flex-col lg:flex-row justify-center items-center mt-1">
               <div
                 className="w-[100%] lg:w-[30%] h-[250px] lg:h-[300px] "
                 align="center"

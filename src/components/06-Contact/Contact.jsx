@@ -107,11 +107,8 @@ export default function Contact() {
                   >
                     <i className="icon bi bi-phone flex-shrink-0"></i>
                     <div className="contactInfoCont">
-                      <h3>
-                        Mobile
-                        <br />
-                      </h3>
-                      <p>+91 9940063000 </p>
+                      <h3>Mobile (6 am - 8 pm)</h3>
+                      <p>+91 9940063000 / 044-43368237</p>
                     </div>
                   </div>
                 </div>

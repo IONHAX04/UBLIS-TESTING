@@ -22,6 +22,7 @@
 
 .gallerySection h4 {
   font-size: 30px;
+  text-align: center;
 }
 @media only screen and (max-width: 768px) {
   .gallerySection {
@@ -366,7 +367,7 @@
 }
 
 .gallerySection .container {
-  padding: 50px;
+  padding: 20px;
 }
 
 .gallerySection-filters {
