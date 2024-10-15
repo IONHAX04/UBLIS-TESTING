@@ -41,7 +41,7 @@ export default function Contact() {
 
   return (
     <div>
-      <div className="contactUs">
+      <div className="contactUs" style={{ background: "#f9f3eb" }}>
         <div id="contact" className="contact mt-5 section">
           <div className="contactFormContainer col-lg-7 mt-5 p-3">
             <h4>Get in touch</h4>

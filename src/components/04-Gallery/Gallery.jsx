@@ -88,7 +88,7 @@ export default function Gallery() {
       <div
         id="gallerySection"
         className="gallerySection section"
-        style={{ marginBottom: "250px" }}
+        style={{ paddingBottom: "450px", background: "#f9f3eb" }}
       >
         <div className="container introSec">
           <h2>Our Space</h2>

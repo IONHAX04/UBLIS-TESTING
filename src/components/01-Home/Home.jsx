@@ -5,9 +5,19 @@ import { Typewriter } from "react-simple-typewriter";
 import { useNavigate } from "react-router-dom";
 import yogalogo from "../../assets/home/yogalogo.png";
 import therapy from "../../assets/home/therapy.svg";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Container, Row, Col, Card } from "react-bootstrap";
 import img1 from "../../assets/home/homeImgOne.jpg";
 import img2 from "../../assets/home/homeImgTwo.jpg";
+
+import profile from "../../assets/logo/logo.png";
+
+import kids from "../../assets/newYoga/kids.png";
+import ladies from "../../assets/newYoga/ladies.png";
+import senior from "../../assets/newYoga/senior.png";
+import unisex from "../../assets/newYoga/unisex.png";
+import pranayamaImg from "../../assets/newYoga/pranayama.png";
+import pregnancy from "../../assets/newYoga/pregnancy.png";
+import meditation from "../../assets/newClass/meditation.png";
 
 import experience from "../../assets/home/verified.png";
 import graduate from "../../assets/home/graduated.png";
@@ -21,6 +31,62 @@ export default function Home() {
   const handleButtonClick = () => {
     navigate("/contact");
   };
+
+  const cardData = [
+    {
+      id: 1,
+      url: kids,
+      title: "Kids Yoga",
+      description:
+        "Yoga designed specifically for children to improve flexibility and focus.",
+      buttonText: "Join Now",
+    },
+    {
+      id: 2,
+      url: ladies,
+      title: "Ladies Yoga",
+      description: "Strength-building yoga sessions tailored for women.",
+      buttonText: "Join Now",
+    },
+    {
+      id: 3,
+      url: unisex,
+      title: "Unisex Yoga",
+      description:
+        "A mixed yoga class for all to promote calmness and balance.",
+      buttonText: "Join Now",
+    },
+    {
+      id: 4,
+      url: senior,
+      title: "Senior Citizen Yoga",
+      description:
+        "Gentle yoga for seniors focusing on relaxation and well-being.",
+      buttonText: "Join Now",
+    },
+    {
+      id: 5,
+      url: pregnancy,
+      title: "Pregnancy Yoga",
+      description:
+        "Yoga sessions to support the physical and mental health of expecting mothers.",
+      buttonText: "Join Now",
+    },
+    {
+      id: 6,
+      url: meditation,
+      title: "Meditation Sessions",
+      description: "Mindfulness and meditation practices to reduce stress.",
+      buttonText: "Join Now",
+    },
+    {
+      id: 7,
+      url: pranayamaImg,
+      title: "Pranayama",
+      description: "Breathing exercises that improve energy flow and focus.",
+      buttonText: "Join Now",
+    },
+  ];
 
   return (
     <div className="homeContainer welcomeContent">
@@ -248,6 +314,108 @@ export default function Home() {
               <p>800+ Transformed Lives</p>
             </Col>
           </Row>
+        </div>
+      </div>
+      <div className="ourClassesWeOffered">
+        <div className="offeredCont mb-5 pb-5">
+          <h3>Our Classes</h3>
+          <Container>
+            <Row className="gy-4 col-lg-7" style={{ justifyContent: "center" }}>
+              {cardData.map((card) => (
+                <Col
+                  lg={4}
+                  md={6}
+                  key={card.id}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
+                  <Card
+                    style={{
+                      width: "19rem",
+                      height: "16rem",
+                    }}
+                  >
+                    <Card.Img
+                      variant="top"
+                      src={card.url}
+                      style={{
+                        height: "150px",
+                        objectFit: "cover",
+                      }}
+                    />
+                    <Card.Body style={{ textAlign: "center" }}>
+                      <Card.Title>{card.title}</Card.Title>
+                      <button
+                        className="viewContactBtn"
+                        onClick={handleButtonClick}
+                      >
+                        {card.buttonText}
+                      </button>
+                    </Card.Body>
+                  </Card>
+                </Col>
+              ))}
+            </Row>
+          </Container>
+        </div>
+      </div>
+
+      <div className="testimonials">
+        <div className="teamSection">
+          <div id="team" className="team section col-lg-8">
+            <div className="container section-title" data-aos="fade-up">
+              <h2>Our Testimonials</h2>
+            </div>
+
+            <div className="container">
+              <div className="row gy-4">
+                <div
+                  className="col-lg-6"
+                  data-aos="fade-up"
+                  data-aos-delay="100"
+                >
+                  <div className="team-member d-flex align-items-start">
+                    <div className="pic">
+                      <img src={profile} className="img-fluid" alt="" />
+                    </div>
+                    <div className="member-info">
+                      <h4>Ramya Subramanian</h4>
+                      <span>2 Weeks ago </span>
+                      <p>
+                        Ublis Centre is a place where I find peace and growth.
+                        Deepika Mam is an exceptional yoga teacher, mentor, and
+                        guide...{" "}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  className="col-lg-6"
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                >
+                  <div className="team-member d-flex align-items-start">
+                    <div className="pic">
+                      <img src={profile} className="img-fluid" alt="" />
+                    </div>
+                    <div className="member-info">
+                      <h4>Subhashini Subramanian</h4>
+                      <span>2 Weeks ago </span>
+                      <p>
+                        Been practicing yoga under Deepika Mam's guidance. She
+                        teaches very well and provides attention to each
+                        individuals...
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

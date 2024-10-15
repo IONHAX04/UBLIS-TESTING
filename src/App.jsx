@@ -37,56 +37,9 @@ function App() {
     }
   }, []);
 
-  const speedDialItems = [
-    {
-      label: "Whatsapp",
-      icon: "pi pi-whatsapp",
-      command: () => {
-        window.open("https://wa.me/919940063000", "_blank");
-        toast.current.show({
-          severity: "success",
-          summary: "Whatsapp",
-          detail: "Redirected to Whatsapp...",
-        });
-      },
-    },
-    {
-      label: "Email",
-      icon: "pi pi-envelope",
-      command: () => {
-        window.open("mailto:ublisyoga@gmail.com", "_blank");
-        toast.current.show({
-          severity: "info",
-          summary: "Email",
-          detail: "Redirected to Email...",
-        });
-      },
-    },
-    {
-      label: "Instagram",
-      icon: "pi pi-instagram",
-      command: () => {
-        window.open("https://www.instagram.com/ublis_yoga/", "_blank");
-        toast.current.show({
-          severity: "error",
-          summary: "Instagram",
-          detail: "Redirected to Instagram...",
-        });
-      },
-    },
-    {
-      label: "Phone",
-      icon: "pi pi-phone",
-      command: () => {
-        window.open("tel:+919940063000", "_blank");
-        toast.current.show({
-          severity: "info",
-          summary: "Phone",
-          detail: "Redirected to Phone...",
-        });
-      },
-    },
-  ];
+  const handleWhatsappClick = () => {
+    window.open("https://wa.me/919940063000", "_blank");
+  };
 
   return (
     <>
@@ -103,19 +56,16 @@ function App() {
         </Routes>
         <Footer />
       </Router>
-
       <Toast ref={toast} />
-
       <SpeedDial
-        model={speedDialItems}
         showIcon="pi pi-whatsapp"
-        hideIcon="pi pi-times"
         radius={120}
         type="quarter-circle"
         direction="up-left"
+        onClick={handleWhatsappClick}
         style={{
           right: 30,
-          bottom: 30,
+          bottom: 40,
           zIndex: "10000",
           borderRadius: "50%",
           boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
