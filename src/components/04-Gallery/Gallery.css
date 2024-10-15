@@ -367,7 +367,7 @@
 }
 
 .gallerySection .container {
-  padding: 20px;
+  padding: 50px;
 }
 
 .gallerySection-filters {
@@ -375,4 +375,8 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+}
+
+.introSec {
+  padding: 20px !important;
 }
