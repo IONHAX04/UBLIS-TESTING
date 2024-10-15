@@ -483,3 +483,17 @@ section {
   font-size: 23px;
   padding-bottom: 25px !important;
 }
+
+.testimonialsView {
+  margin: 30px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #f95005;
+  padding: 10px 40px;
+  border-radius: 8px;
+  background-color: #f95005;
+  color: white;
+  font-size: 21px;
+  font-weight: bold ;
+  width: 30% !important;
+}

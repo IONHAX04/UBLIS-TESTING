@@ -30,6 +30,12 @@ export default function Home() {
 
   const handleButtonClick = () => {
     navigate("/contact");
+    window.scrollTo(0, 0);
+  };
+
+  const handleTestimonials = () => {
+    navigate("/testimonials");
+    window.scrollTo(0, 0);
   };
 
   const cardData = [
@@ -363,7 +369,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="testimonials">
+      <div className="testimonials mt-5 pt-10 pb-10">
         <div className="teamSection">
           <div id="team" className="team section col-lg-8">
             <div className="container section-title" data-aos="fade-up">
@@ -416,6 +422,12 @@ export default function Home() {
               </div>
             </div>
           </div>
+          <button
+            onClick={handleTestimonials}
+            className="testimonialsView container"
+          >
+            Explore More
+          </button>
         </div>
       </div>
     </div>

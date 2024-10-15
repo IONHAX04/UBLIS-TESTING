@@ -127,7 +127,7 @@ export default function About() {
           </div>
         </Row>{" "}
       </div>
-      <div className="teamSection">
+      <div className="teamSection" style={{ height: "60vh" }}>
         <div id="team" className="team section col-lg-8">
           <div className="container section-title" data-aos="fade-up">
             <h2>Team Members</h2>
