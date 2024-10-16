@@ -2,15 +2,17 @@ import React, { useEffect, useState } from "react";
 import { Country, State, City } from "country-state-city";
 import TextInput from "../Inputs/TextInput";
 import SelectInput from "../Inputs/SelectInput";
-import TextareaInput from "../Inputs/TextareaInput";
+// import TextareaInput from "../Inputs/TextareaInput";
 import CheckboxInput from "../Inputs/CheckboxInput";
 import RadioButton from "../Inputs/RadiobuttonInput";
-import RadiobuttonInput from "../Inputs/RadiobuttonInput";
+// import RadiobuttonInput from "../Inputs/RadiobuttonInput";
 import TextLabel from "../Labels/TextLabel";
 import Axios from "axios";
 import CryptoJS from "crypto-js";
+import { useNavigate } from "react-router-dom";
 
 const RegistrationStepper = () => {
+  const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
 
   const [inputs, setInputs] = useState({
@@ -45,6 +47,7 @@ const RegistrationStepper = () => {
     activities: "",
     anthingelse: "",
     preferabletiming: "",
+    branch: "",
     others: "",
     medicaldetails: "",
     doctorname: "",
@@ -123,14 +126,22 @@ const RegistrationStepper = () => {
 
   const [preferableTiming, setPreferableTiming] = useState([]);
 
+  const [branchList, setBranchList] = useState([]);
+
   const [personalHealthProblem, setPersonalHealthProblem] = useState([]);
 
-  const timingOptions = Object.entries(preferableTiming).map(
-    ([value, label]) => ({
-      value,
-      label,
-    })
-  );
+  const timingOptions = preferableTiming.map((timing) => {
+    const [key, value] = Object.entries(timing)[0]; // Extract the key-value pair from the object
+    return {
+      value: key, // The key (e.g., '1', '2', etc.) will be the value
+      label: value, // The actual timing string will be the label
+    };
+  });
+
+  const branchOptions = Object.entries(branchList).map(([value, label]) => ({
+    value, // Key (e.g., '1')
+    label, // Value (e.g., 'Chennai')
+  }));
 
   useEffect(() => {
     Axios.get(
@@ -150,9 +161,12 @@ const RegistrationStepper = () => {
           import.meta.env.VITE_ENCRYPTION_KEY
         );
 
+        console.log(data);
+
         if (data.success) {
           localStorage.setItem("JWTtoken", "Bearer " + data.token + "");
           setPreferableTiming(data.data.PreferableTiming);
+          setBranchList(data.data.branchList);
           setInputs({
             ...inputs,
             fname: data.data.ProfileData.fname,
@@ -197,20 +211,26 @@ const RegistrationStepper = () => {
   };
 
   const handleInput = (e) => {
-    setInputs({
-      ...inputs,
-      [e.target.name]: e.target.value,
-    });
+    const { name, value } = e.target;
 
-    if (inputs.addressboth) {
-      setInputs({
-        ...inputs,
-        tempaddess: inputs.peraddress,
-        tempstate: inputs.perstate,
-        tempincode: inputs.perpincode,
-        tempcity: inputs.percity,
-      });
+    let updatedInputs = {
+      ...inputs,
+      [name]: value,
+    };
+
+    // If the "addressboth" flag is true, copy the permanent address fields to temporary fields
+    if (updatedInputs.addressboth) {
+      updatedInputs = {
+        ...updatedInputs,
+        tempaddess: updatedInputs.peraddress,
+        tempstate: updatedInputs.perstate,
+        tempincode: updatedInputs.perpincode,
+        tempcity: updatedInputs.percity,
+      };
     }
+
+    // Set the final updated inputs
+    setInputs(updatedInputs);
   };
 
   const submitForm = () => {
@@ -301,7 +321,7 @@ const RegistrationStepper = () => {
       })
       .catch((err) => {
         // Catching any 400 status or general errors
-        console.error("Error: ", err);
+        console.log("Error: ", err);
       });
   };
 
@@ -643,22 +663,23 @@ const RegistrationStepper = () => {
                       label="Use Communication Address & Permanent Address as Same."
                       onChange={() => {
                         if (addessschecked) {
-                          setAddressChecked(false);
                           setInputs({
                             ...inputs,
+                            tempaddess: "",
+                            tempstate: "",
+                            tempincode: "",
+                            tempcity: "",
                             addressboth: false,
                           });
+                          setAddressChecked(false);
+                        } else {
+                          setAddressChecked(true);
                           setInputs({
                             ...inputs,
                             tempaddess: inputs.peraddress,
                             tempstate: inputs.perstate,
                             tempincode: inputs.perpincode,
                             tempcity: inputs.percity,
-                          });
-                        } else {
-                          setAddressChecked(true);
-                          setInputs({
-                            ...inputs,
                             addressboth: true,
                           });
                         }
@@ -904,18 +925,17 @@ const RegistrationStepper = () => {
                     />
                   </div>
                   <div className="mb-[15px]">
-                    <TextareaInput
+                    <TextInput
                       id="accidentdetail"
+                      type="text"
                       name="injuries"
+                      placeholder="your name"
                       label="Details"
-                      placeholder="Write your message"
-                      rows={2}
+                      value={inputs.injuries}
+                      onChange={(e) => handleInput(e)}
                       disabled={
                         selectedOption.accident === "yes" ? false : true
                       }
-                      value={inputs.injuries}
-                      onChange={(e) => handleInput(e)}
-                      required
                     />
                   </div>
                 </div>
@@ -957,12 +977,12 @@ const RegistrationStepper = () => {
                     />
                   </div>
                   <div className="mb-[15px]">
-                    <TextareaInput
+                    <TextInput
                       id="breaksdetail"
+                      type="text"
                       name="breaks"
+                      placeholder="your name"
                       label="Details"
-                      placeholder="Write your message"
-                      rows={2}
                       disabled={selectedOption.breaks === "yes" ? false : true}
                       value={inputs.breaks}
                       onChange={(e) => handleInput(e)}
@@ -972,12 +992,13 @@ const RegistrationStepper = () => {
 
                 <div className="w-[90%] mb-[15px]">
                   <div className="w-full">
-                    <TextareaInput
+                    <TextInput
                       id="otheractivities"
+                      type="text"
                       name="activities"
+                      placeholder="your name"
                       label="Other Activities"
-                      placeholder="Write your message"
-                      rows={2}
+                      disabled={selectedOption.breaks === "yes" ? false : true}
                       value={inputs.activities}
                       onChange={(e) => handleInput(e)}
                     />
@@ -986,12 +1007,12 @@ const RegistrationStepper = () => {
 
                 <div className="w-[90%] mb-[15px]">
                   <div className="w-full">
-                    <TextareaInput
+                    <TextInput
                       id="anythingelse"
+                      type="text"
                       name="anthingelse"
+                      placeholder="your name"
                       label="Anything else"
-                      placeholder="Write your message"
-                      rows={2}
                       value={inputs.anthingelse}
                       onChange={(e) => handleInput(e)}
                     />
@@ -999,7 +1020,19 @@ const RegistrationStepper = () => {
                 </div>
 
                 <div className="w-[90%] mb-[15px]">
-                  {/* <SelectInput
+                  <SelectInput
+                    id="branch"
+                    name="branch"
+                    label="Branch *"
+                    options={branchOptions}
+                    required
+                    value={inputs.branch}
+                    onChange={(e) => handleInput(e)}
+                  />
+                </div>
+
+                <div className="w-[90%] mb-[15px]">
+                  <SelectInput
                     id="preferabletiming"
                     name="preferabletiming"
                     label="Preferable Timing *"
@@ -1007,7 +1040,7 @@ const RegistrationStepper = () => {
                     required
                     value={inputs.preferabletiming}
                     onChange={(e) => handleInput(e)}
-                  /> */}
+                  />
                 </div>
               </div>
               <hr />
@@ -1048,9 +1081,9 @@ const RegistrationStepper = () => {
               </div>
               <hr />
               <div className="w-full h-[73vh] overflow-auto">
-                <div className="w-[90%] flex flex-wrap my-5 items-center justify-start gap-x-1 lg:gap-x-5 gap-y-5">
+                <div className="w-[90%] flex flex-wrap my-4  items-center justify-start gap-x-1 lg:gap-x-4 gap-y-5">
                   {conditions.map((condition, index) => (
-                    <div className="w-[145px]" key={index}>
+                    <div className="w-[140px]" key={index}>
                       <CheckboxInput
                         id={`condition-${index}`}
                         checked={condition.checked === 1}
@@ -1062,24 +1095,24 @@ const RegistrationStepper = () => {
                 </div>
 
                 <div className="w-[90%] mb-[15px]">
-                  <TextareaInput
+                  <TextInput
                     id="others"
+                    type="text"
                     name="others"
+                    placeholder="your name"
                     label="Others"
-                    placeholder="Write your message"
-                    rows={2}
                     value={inputs.others}
                     onChange={(e) => handleInput(e)}
                   />
                 </div>
 
                 <div className="w-[90%] mb-[15px]">
-                  <TextareaInput
+                  <TextInput
                     id="medicationdetails"
+                    type="text"
                     name="medicaldetails"
+                    placeholder="your name"
                     label="Medication Details"
-                    placeholder="Write your message"
-                    rows={2}
                     value={inputs.medicaldetails}
                     onChange={(e) => handleInput(e)}
                   />
@@ -1137,13 +1170,13 @@ const RegistrationStepper = () => {
                     <TextInput
                       id="hospital"
                       type="text"
-                      name="sdsdsd"
+                      name="hospitalname"
                       label="Hospital"
                       placeholder="Write your message"
                       rows={2}
                       disabled={selectedOption.care === "yes" ? false : true}
                       required
-                      value={inputs.doctorname}
+                      value={inputs.hospitalname}
                       onChange={(e) => handleInput(e)}
                     />
                   </div>
@@ -1158,13 +1191,11 @@ const RegistrationStepper = () => {
                       id="backpainyes"
                       value="yes"
                       name="backpain"
-                      selectedOption={
-                        selectedOption.backpain === "yes" ? false : true
-                      }
+                      selectedOption={selectedOption.backpain || ""}
                       onChange={(e) => {
                         setSelectedOption({
                           ...selectedOption,
-                          backpain: e.target.value,
+                          backpain: e.target.value, // Corrected: updating backpain instead of care
                         });
                       }}
                       label="Yes"
@@ -1178,7 +1209,7 @@ const RegistrationStepper = () => {
                       onChange={(e) => {
                         setSelectedOption({
                           ...selectedOption,
-                          backpain: e.target.value,
+                          backpain: e.target.value, // Corrected: updating backpain instead of care
                         });
                       }}
                       label="No"
@@ -1188,7 +1219,7 @@ const RegistrationStepper = () => {
                   <div className="mb-[15px]">
                     <SelectInput
                       id="pain"
-                      name="gender"
+                      name="painscale"
                       label="Pain Scale"
                       options={[
                         { value: "upper", label: "Upper" },
@@ -1243,45 +1274,44 @@ const RegistrationStepper = () => {
               <hr />
               <div className="w-full h-[73vh] overflow-auto">
                 <div className="w-[90%] mt-3 mb-[15px]">
-                  <TextareaInput
+                  <TextInput
                     id="durationproblem"
+                    type="text"
                     name="duration"
+                    placeholder="your name"
                     label="Duration of the Problem"
-                    placeholder="Write your message"
-                    rows={2}
                     value={inputs.duration}
                     onChange={(e) => handleInput(e)}
                   />
                 </div>
                 <div className="w-[90%] mb-[15px]">
-                  <TextareaInput
+                  <TextInput
                     id="relevantpasthistory"
+                    type="text"
                     name="past"
                     label="Relevant past History"
                     placeholder="Write your message"
-                    rows={2}
                     value={inputs.past}
                     onChange={(e) => handleInput(e)}
                   />
                 </div>
                 <div className="w-[90%] mb-[15px]">
-                  <TextareaInput
+                  <TextInput
                     id="relevantfamilyhistory"
+                    type="text"
                     name="family"
                     label="Relevant Family History"
                     placeholder="Write your message"
-                    rows={2}
                     value={inputs.family}
                     onChange={(e) => handleInput(e)}
                   />
                 </div>
                 <div className="w-[90%] mb-[15px]">
-                  <TextareaInput
+                  <TextInput
                     id="anythingelsetherapy"
                     name="therapyanything"
                     label="Anything else"
-                    placeholder="Write your message"
-                    rows={2}
+                    type="text"
                     value={inputs.therapyanything}
                     onChange={(e) => handleInput(e)}
                   />

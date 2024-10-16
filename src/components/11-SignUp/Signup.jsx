@@ -7,7 +7,7 @@ export default function Signup() {
   console.log("navigate", navigate);
   return (
     <div
-      className="w-[100%] bg-[#f9f3eb] h-[auto] lg:h-screen flex flex-col justify-around"
+      className="w-[100%] pt-10 bg-[#f9f3eb] h-[auto] lg:h-screen flex flex-col justify-around"
       align="center"
     >
       <div className="w-[100%] h-auto flex flex-col lg:flex-row">

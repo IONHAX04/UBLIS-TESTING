@@ -52,11 +52,43 @@ export const Stepper = () => {
     repassword: "",
   });
 
+  const [verify, setVerify] = useState(false);
+
   const handleinput = (event) => {
     setInput({
       ...input,
       [event.target.name]: event.target.value,
     });
+
+    if (event.target.name === "username") {
+      Axios.post(import.meta.env.VITE_API_URL + "users/validateUserName", {
+        temp_su_username: event.target.value,
+      })
+        .then((res) => {
+          const data = decrypt(
+            res.data[1],
+            res.data[0],
+            import.meta.env.VITE_ENCRYPTION_KEY
+          );
+
+          if (data.success) {
+            setVerify(true);
+          } else {
+            setVerify(false);
+          }
+        })
+        .catch((err) => {
+          // Catching any 400 status or general errors
+          console.error("Error: ", err);
+          setSubmitloadingStatus(false); // Turn off the loading spinner
+          setFormerror2({
+            errorstatus: true,
+            errormessage:
+              err.response?.data?.message ||
+              "Something went wrong. Please try again.",
+          });
+        });
+    }
 
     setFormerror1({
       errorstatus: false,
@@ -197,6 +229,15 @@ export const Stepper = () => {
       return 0;
     }
 
+    if (!verify) {
+      setFormerror2({
+        errorstatus: true,
+        errormessage: "Username Must be Unique",
+      });
+
+      return 0;
+    }
+
     if (input.password.length <= 0) {
       setFormerror2({
         errorstatus: true,
@@ -246,7 +287,6 @@ export const Stepper = () => {
       temp_su_password: input.password,
     })
       .then((res) => {
-
         const data = decrypt(
           res.data[1],
           res.data[0],
@@ -265,8 +305,7 @@ export const Stepper = () => {
           setSubmitloadingStatus(false); // Turn off the loading spinner
           setFormerror2({
             errorstatus: true,
-            errormessage:
-              data.message || "An error occurred during signup.",
+            errormessage: data.message || "An error occurred during signup.",
           });
         }
       })
@@ -397,7 +436,26 @@ export const Stepper = () => {
               <div className="w-[100%]" align="center">
                 <div className="w-[90%] lg:w-[80%] flex justify-between">
                   <div className="w-[100%]" align="start">
-                    <TextInput
+                    <div className="relative">
+                      <input
+                        id="username"
+                        name="username"
+                        label="Username"
+                        type="text"
+                        placeholder="Write your message"
+                        required
+                        value={input.username}
+                        onChange={handleinput}
+                        className={`relative w-full h-10 px-3 placeholder-transparent transition-all border-2 rounded outline-none focus-visible:outline-none peer border-[#b3b4b6] text-[#4c4c4e] autofill:bg-white focus:border-[#ff5001] disabled:cursor-not-allowed disabled:bg-slate-50 disabled:text-slate-400`}
+                      />
+                      <label
+                        htmlFor="username"
+                        className={`cursor-text peer-focus:cursor-default -top-2.5 absolute left-2 z-[1] px-2 text-[14px] text-[#4c4c4e] transition-all before:absolute before:top-0 before:left-0 before:z-[-1] before:block before:h-full before:w-full before:bg-white before:transition-all peer-required:after:content-[] peer-focus:-top-2.5 peer-focus:text-[14px] peer-disabled:cursor-not-allowed peer-disabled:text-slate-400 peer-disabled:before:bg-white`}
+                      >
+                        Username
+                      </label>
+                    </div>
+                    {/* <TextInput
                       id="username"
                       name="username"
                       label="Username"
@@ -405,7 +463,16 @@ export const Stepper = () => {
                       required
                       value={input.username}
                       onChange={handleinput}
-                    />
+                    /> */}
+                  </div>
+                  <div className="w-[10%] flex justify-center items-center">
+                    {!verify && input.username.length === 0 ? (
+                      <i className="text-[25px] text-[#94a3b8] fa-regular fa-circle-check"></i>
+                    ) : verify ? (
+                      <i className="text-[25px] text-[green] fa-regular fa-circle-check"></i>
+                    ) : (
+                      <i className="text-[25px] text-[red] fa-regular fa-circle-xmark"></i>
+                    )}
                   </div>
                 </div>
               </div>

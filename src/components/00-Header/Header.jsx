@@ -3,14 +3,15 @@ import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { AnimatePresence, motion } from "framer-motion";
-
 import logo from "../../assets/logos/Ublis Yoga - Logo 2.png";
+import RegistrationStepper from "../../pages/RegistrationStepper/RegistrationStepper";
 
 export default function Header() {
   const [headerBg, setHeaderBg] = useState("transparent");
-  const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   const [iconRotation, setIconRotation] = useState(180);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const navigate = useNavigate();
 
   const handleNavigate = (path) => {
     navigate(path);
@@ -35,32 +36,20 @@ export default function Header() {
   ];
 
   const menuVars = {
-    initial: {
-      scaleY: 0,
-    },
+    initial: { scaleY: 0 },
     animate: {
       scaleY: 1,
-      transition: {
-        duration: 0.5,
-        ease: [0.12, 0, 0.39, 0],
-      },
+      transition: { duration: 0.5, ease: [0.12, 0, 0.39, 0] },
     },
     exit: {
       scaleY: 0,
-      transition: {
-        delay: 0.5,
-        duration: 0.5,
-        ease: [0.22, 0, 0.36, 1],
-      },
+      transition: { delay: 0.5, duration: 0.5, ease: [0.22, 0, 0.36, 1] },
     },
   };
 
   const containerVariant = {
     initial: {
-      transition: {
-        staggerChildren: 0.09,
-        staggerDirection: -1,
-      },
+      transition: { staggerChildren: 0.09, staggerDirection: -1 },
     },
     open: {
       transition: {
@@ -74,18 +63,9 @@ export default function Header() {
   const mobileLinkVars = {
     initial: {
       y: "30vh",
-      transition: {
-        duration: 0.5,
-        ease: [0.37, 0, 0.63, 1],
-      },
+      transition: { duration: 0.5, ease: [0.37, 0, 0.63, 1] },
     },
-    open: {
-      y: 0,
-      transition: {
-        duration: 0.7,
-        ease: [0, 0.55, 0.45, 1],
-      },
-    },
+    open: { y: 0, transition: { duration: 0.7, ease: [0, 0.55, 0.45, 1] } },
   };
 
   const MobileNavLink = ({ title, href }) => {
@@ -114,17 +94,29 @@ export default function Header() {
     };
 
     window.addEventListener("scroll", handleScroll);
+
+    // Check if JWT token exists in local storage
+    const token = localStorage.getItem("JWTtoken");
+    setIsLoggedIn(!!token);
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const [registrationmodal, setRegistrationmodal] = useState(false);
+
+  const handleclosebtn = () => {
+    setRegistrationmodal(false);
+  };
+
   return (
     <div className="header">
+      {registrationmodal ? (
+        <RegistrationStepper handleclosebtn={handleclosebtn} />
+      ) : null}
       <header
-        className=""
         style={{
-          // backdropFilter: headerBg,
           background: "#ffffff",
-          zIndex: "100",
+          zIndex: "30",
           position: "fixed",
           width: "100%",
         }}
@@ -138,46 +130,68 @@ export default function Header() {
           }}
         >
           <div className="flex items-center gap-[1ch] p-2">
-            <img src={logo} height={110} width={190} />
+            <img src={logo} height={110} width={190} alt="Logo" />
           </div>
           <div
             className="lg:flex navbarLinks hidden gap-12 text-md text-[#000000] cursor-pointer"
             style={{ fontWeight: "bold", fontSize: "17px" }}
           >
-            <p onClick={() => handleNavigate("/")}>Home</p>
-            <p onClick={() => handleNavigate("/about")}>About</p>
-            <p onClick={() => handleNavigate("/class")}>Class</p>
-            <p onClick={() => handleNavigate("/gallery")}>Gallery</p>
-            <p onClick={() => handleNavigate("/contact")}>Contact</p>
+            {navLinks.slice(0, 5).map((link, index) => (
+              <p key={index} onClick={() => handleNavigate(link.href)}>
+                {link.title}
+              </p>
+            ))}
           </div>
-          <button
-            className="buttonSignIn lg:flex hidden"
-            onClick={() => handleNavigate("/signin")}
-            style={{
-              border: "2px solid #f95005",
-              padding: "5px 40px",
-              borderRadius: "8px",
-              marginLeft: "-50px",
-              color: "#f95005",
-              fontWeight: "bold",
-            }}
-          >
-            Sign In
-          </button>
-          <button
-            className="buttonSignIn lg:flex hidden"
-            onClick={() => handleNavigate("/signup")}
-            style={{
-              border: "2px solid #f95005",
-              padding: "5px 40px",
-              borderRadius: "8px",
-              marginLeft: "-130px",
-              color: "#f95005",
-              fontWeight: "bold",
-            }}
-          >
-            Sign Up
-          </button>
+
+          {/* Conditional rendering of buttons or 'Register' text */}
+          {isLoggedIn ? (
+            <button
+              className="lg:flex hidden"
+              style={{
+                border: "2px solid #f95005",
+                padding: "5px 40px",
+                borderRadius: "8px",
+                marginLeft: "-130px",
+                color: "#f95005",
+                fontWeight: "bold",
+              }}
+              onClick={() => setRegistrationmodal(true)}
+            >
+              Register
+            </button>
+          ) : (
+            <>
+              <button
+                className="buttonSignIn lg:flex hidden"
+                onClick={() => handleNavigate("/signin")}
+                style={{
+                  border: "2px solid #f95005",
+                  padding: "5px 40px",
+                  borderRadius: "8px",
+                  marginLeft: "-50px",
+                  color: "#f95005",
+                  fontWeight: "bold",
+                }}
+              >
+                Sign In
+              </button>
+              <button
+                className="buttonSignIn lg:flex hidden"
+                onClick={() => handleNavigate("/signup")}
+                style={{
+                  border: "2px solid #f95005",
+                  padding: "5px 40px",
+                  borderRadius: "8px",
+                  marginLeft: "-130px",
+                  color: "#f95005",
+                  fontWeight: "bold",
+                }}
+              >
+                Sign Up
+              </button>
+            </>
+          )}
+
           <div
             className="cursor-pointer pt-px lg:hidden text-md text-white"
             onClick={toggleMenu}
@@ -194,6 +208,7 @@ export default function Header() {
             ></i>
           </div>
         </nav>
+
         <AnimatePresence>
           {open && (
             <motion.div
@@ -209,7 +224,7 @@ export default function Header() {
                   <h1 className="text-lg text-white uppercase">
                     <div className="flex items-center gap-[1ch] text-2xl font-bold">
                       <h2>Ublis Yoga</h2>
-                    </div>{" "}
+                    </div>
                   </h1>
                   <p
                     className="cursor-pointer pt-px text-md text-white"

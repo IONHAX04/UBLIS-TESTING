@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Header from "./components/00-Header/Header";
@@ -10,18 +10,21 @@ import Blog from "./components/05-Blog/Blog";
 import Contact from "./components/06-Contact/Contact";
 import Footer from "./components/10-Footer/Footer";
 
+import RegistrationStepper from "./pages/RegistrationStepper/RegistrationStepper";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./App.css";
 
 // Import SpeedDial and Toast from PrimeReact
-import { SpeedDial } from "primereact/speeddial";
-import { Toast } from "primereact/toast";
+// import { SpeedDial } from "primereact/speeddial";
+// import { Toast } from "primereact/toast";
 import Testimonials from "./components/01-Home/Testimonials";
 import Signup from "./components/11-SignUp/Signup";
+import { SignIn } from "./components/12-SignIn/SignIn";
 
 function App() {
-  const toast = useRef(null);
+  // const toast = useRef(null);
 
   useEffect(() => {
     AOS.init({
@@ -38,10 +41,6 @@ function App() {
     }
   }, []);
 
-  const handleWhatsappClick = () => {
-    window.open("https://wa.me/919940063000", "_blank");
-  };
-
   return (
     <>
       <Router>
@@ -54,11 +53,13 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/register" element={<RegistrationStepper />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
       </Router>
-      <Toast ref={toast} />
+      {/* <Toast ref={toast} />
       <SpeedDial
         showIcon="pi pi-whatsapp"
         radius={120}
@@ -72,7 +73,7 @@ function App() {
           borderRadius: "50%",
           boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
         }}
-      />
+      /> */}
     </>
   );
 }
