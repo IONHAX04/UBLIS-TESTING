@@ -29,8 +29,9 @@ export default function Header() {
     { title: "About", href: "/about" },
     { title: "Class", href: "/class" },
     { title: "Gallery", href: "/gallery" },
-    // { title: "Blog", href: "/blog" },
     { title: "Contact", href: "/contact" },
+    { title: "Sign In", href: "/signin" },
+    { title: "Sign Up", href: "/signup" },
   ];
 
   const menuVars = {
@@ -91,7 +92,7 @@ export default function Header() {
     return (
       <motion.div
         variants={mobileLinkVars}
-        className="text-4xl uppercase font-bold text-white text-center pb-5"
+        className="text-2xl uppercase font-bold text-white text-center pb-5"
       >
         <p onClick={() => handleNavigate(href)}>{title}</p>
       </motion.div>
@@ -149,18 +150,34 @@ export default function Header() {
             <p onClick={() => handleNavigate("/gallery")}>Gallery</p>
             <p onClick={() => handleNavigate("/contact")}>Contact</p>
           </div>
-          <div
-            className="buttonSignIn"
+          <button
+            className="buttonSignIn lg:flex hidden"
+            onClick={() => handleNavigate("/signin")}
             style={{
               border: "2px solid #f95005",
               padding: "5px 40px",
               borderRadius: "8px",
+              marginLeft: "-50px",
               color: "#f95005",
               fontWeight: "bold",
             }}
           >
             Sign In
-          </div>
+          </button>
+          <button
+            className="buttonSignIn lg:flex hidden"
+            onClick={() => handleNavigate("/signup")}
+            style={{
+              border: "2px solid #f95005",
+              padding: "5px 40px",
+              borderRadius: "8px",
+              marginLeft: "-130px",
+              color: "#f95005",
+              fontWeight: "bold",
+            }}
+          >
+            Sign Up
+          </button>
           <div
             className="cursor-pointer pt-px lg:hidden text-md text-white"
             onClick={toggleMenu}
