@@ -137,7 +137,7 @@ export default function Header() {
           }}
         >
           <div className="flex items-center gap-[1ch] p-2">
-            <img src={logo} height={150} width={250} />
+            <img src={logo} height={110} width={190} />
           </div>
           <div
             className="lg:flex navbarLinks hidden gap-12 text-md text-[#000000] cursor-pointer"
@@ -148,6 +148,18 @@ export default function Header() {
             <p onClick={() => handleNavigate("/class")}>Class</p>
             <p onClick={() => handleNavigate("/gallery")}>Gallery</p>
             <p onClick={() => handleNavigate("/contact")}>Contact</p>
+          </div>
+          <div
+            className="buttonSignIn"
+            style={{
+              border: "2px solid #f95005",
+              padding: "5px 40px",
+              borderRadius: "8px",
+              color: "#f95005",
+              fontWeight: "bold",
+            }}
+          >
+            Sign In
           </div>
           <div
             className="cursor-pointer pt-px lg:hidden text-md text-white"
