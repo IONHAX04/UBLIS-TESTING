@@ -174,9 +174,9 @@ export default function Home() {
       <div className="homePageContents">
         <div className="homePageContentYoga">
           <div className="w-[100%]">
-            <div className="flex flex-col lg:flex-row justify-center items-center mt-1">
+            <div className="flex flex-col lg:flex-row justify-center items-center mt-5 mb-5">
               <div
-                className="w-[100%] lg:w-[30%] h-[250px] lg:h-[300px] "
+                className="w-[100%] lg:w-[30%]"
                 align="center"
                 data-aos="flip-left"
                 data-aos-delay="200"
@@ -194,11 +194,11 @@ export default function Home() {
                 />
               </div>
               <div
-                className=" w-[90%] lg:w-[40%] h-[340px] lg:h-[400px] flex justify-center items-center"
+                className=" w-[90%] lg:w-[40%] flex justify-center items-center"
                 data-aos="fade-up"
                 data-aos-delay="150"
               >
-                <p className="text-[18px] text-[#000000] text-justify font-semibold">
+                <p className="text-[18px] text-[#000000] text-justify font-semibold cardsTest">
                   Yoga is about bringing together the body, mind and soul as
                   one. It’s more than just physical exercise—it helps you stay
                   physically fit, mentally clear and emotionally balanced.
@@ -207,9 +207,9 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="flex flex-col lg:flex-row justify-center items-center">
+            <div className="flex flex-col lg:flex-row justify-center items-center mt-5 mb-5 pt-10">
               <div
-                className="w-[100%] lg:w-[30%] h-[250px] lg:h-[300px] "
+                className="w-[100%] lg:w-[30%]"
                 align="center"
                 data-aos="flip-left"
                 data-aos-delay="200"
@@ -226,9 +226,9 @@ export default function Home() {
                   alt="logo"
                 />
               </div>
-              <div className=" w-[90%] lg:w-[40%] h-[340px] lg:h-[400px] flex justify-center items-center">
+              <div className=" w-[90%] lg:w-[40%] flex justify-center items-center">
                 <p
-                  className="text-[18px] text-[#000000] text-justify font-semibold"
+                  className="text-[18px] text-[#000000] text-justify font-semibold cardsTest"
                   data-aos="fade-up"
                   data-aos-delay="150"
                 >
@@ -243,7 +243,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="whoAreWe">
+        <div className="whoAreWe mt-20 mb-20">
           <section id="whoWeAre" className="whoWeAre section col-lg-8">
             <div className="container section-title" data-aos="fade-up">
               <h3
@@ -262,7 +262,7 @@ export default function Home() {
                   data-aos-delay="200"
                   align="center"
                 >
-                  <p className="whoWeArePara">
+                  <p className="whoWeArePara cardsTest">
                     At Ublis Yoga, we are a passionate and dedicated to creating
                     a sanctuary for holistic wellness. Our studio is a place
                     where ancient wisdom meets modern practice, offering a
