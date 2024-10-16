@@ -198,7 +198,7 @@ export default function Home() {
                 data-aos="fade-up"
                 data-aos-delay="150"
               >
-                <p className="text-[18px] text-[#000000] text-justify font-semibold cardsTest">
+                <p className="text-[20px] text-[#000000] text-justify font-semibold cardsTest">
                   Yoga is about bringing together the body, mind and soul as
                   one. It’s more than just physical exercise—it helps you stay
                   physically fit, mentally clear and emotionally balanced.
@@ -228,7 +228,7 @@ export default function Home() {
               </div>
               <div className=" w-[90%] lg:w-[40%] flex justify-center items-center">
                 <p
-                  className="text-[18px] text-[#000000] text-justify font-semibold cardsTest"
+                  className="text-[20px] text-[#000000] text-justify font-semibold cardsTest"
                   data-aos="fade-up"
                   data-aos-delay="150"
                 >
