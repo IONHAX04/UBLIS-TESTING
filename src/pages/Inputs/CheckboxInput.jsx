@@ -9,7 +9,7 @@ export default function CheckboxInput({
   id,
 }) {
   return (
-    <div className="flex w-full justify-start items-center">
+    <div className="flex w-full items-center">
       <input
         className="peer h-[20px] w-[20px] cursor-pointer appearance-none rounded-full border-4 border-[#b3b4b6] bg-white transition-colors checked:border-[#ff5001] checked:bg-[#ff5001] checked:hover:border-[#ff5001] checked:hover:bg-[#ff5001] focus:outline-none checked:focus:border-[#ff5001] checked:focus:bg-[#ff5001] focus-visible:outline-none disabled:cursor-not-allowed disabled:border-slate-100 disabled:bg-slate-50"
         type="checkbox"
@@ -20,7 +20,7 @@ export default function CheckboxInput({
         required={required}
       />
       <label
-        className={`cursor-pointer w-full pl-2 text-slate-500 peer-disabled:cursor-not-allowed peer-disabled:text-slate-400 ${
+        className={`cursor-pointer w-full text-start pl-2 text-slate-500 peer-disabled:cursor-not-allowed peer-disabled:text-slate-400 ${
           disabled ? "text-slate-400" : "text-[#4d4f53] font-semibold"
         }`}
         htmlFor={id} // Use the id here too

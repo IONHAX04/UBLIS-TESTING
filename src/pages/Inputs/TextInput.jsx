@@ -37,7 +37,7 @@ const TextInput = ({
           isInvalid ? "peer-invalid:text-pink-500" : "peer-focus:text-[#ff5001]"
         } peer-placeholder-shown:text-bold ${
           required ? "peer-required:after:content-[]" : ""
-        } peer-focus:-top-2.5 peer-focus:text-[14px] peer-disabled:cursor-not-allowed peer-disabled:text-slate-400 peer-disabled:before:bg-transparent`}
+        } peer-focus:-top-2.5 peer-focus:text-[14px] peer-disabled:cursor-not-allowed peer-disabled:text-slate-400 peer-disabled:before:bg-white`}
       >
         {label}
       </label>

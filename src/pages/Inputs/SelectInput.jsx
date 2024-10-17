@@ -32,7 +32,7 @@ const SelectInput = ({
       </select>
       <label
         htmlFor={id}
-        className="pointer-events-none absolute left-2 z-[1] -top-2 px-2 text-[14px] text-[#4c4c4e] transition-all before:absolute before:left-0 before:z-[-1] before:block before:h-full before:w-full before:bg-white before:transition-all peer-required:after:text-[#000000] peer-valid:text-[14px] peer-focus:text-[14px] peer-focus:text-[#ff5001] peer-disabled:cursor-not-allowed peer-disabled:text-slate-400 peer-disabled:before:bg-transparent"
+        className="pointer-events-none absolute left-2 z-[1] -top-2 px-2 text-[14px] text-[#4c4c4e] transition-all before:absolute before:left-0 before:z-[-1] before:block before:h-full before:w-full before:bg-white before:transition-all peer-required:after:text-[#000000] peer-valid:text-[14px] peer-focus:text-[14px] peer-focus:text-[#ff5001] peer-disabled:cursor-not-allowed peer-disabled:text-slate-400 peer-disabled:before:bg-white"
       >
         {label}
       </label>

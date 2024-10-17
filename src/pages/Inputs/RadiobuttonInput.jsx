@@ -10,7 +10,7 @@ const RadiobuttonInput = ({
   label,
 }) => {
   return (
-    <div className="relative flex items-center">
+    <div className="relative flex">
       <input
         style={{ display: "block" }}
         className="transition-colors h-[20px] w-[20px] rounded-full border-4 border-[#b3b4b6] appearance-none cursor-pointer peer bg-white checked:border-[#ff5001] checked:bg-emerald-500 checked:hover:border-[#ff5001] checked:hover:bg-[#ff5001] focus:outline-none checked:focus:border-[#ff5001] checked:focus:bg-[#ff5001] focus-visible:outline-none disabled:cursor-not-allowed disabled:border-slate-100 disabled:bg-slate-50"
@@ -29,7 +29,7 @@ const RadiobuttonInput = ({
         {label}
       </label>
       <svg
-        className="absolute left-0 w-4 h-4 transition-all duration-300 scale-50 opacity-0 pointer-events-none fill-white peer-checked:scale-100 peer-checked:opacity-100 peer-disabled:cursor-not-allowed"
+        className="absolute left-0 w-[20px] h-[20px] transition-all duration-300 scale-50 opacity-0 pointer-events-none fill-white peer-checked:scale-100 peer-checked:opacity-100 peer-disabled:cursor-not-allowed"
         viewBox="0 0 16 16"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
